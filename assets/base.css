@@ -172,7 +172,10 @@ option.soldout {
         padding-bottom: 80px;
     }
 
-    .template-index .wrapper-body {
+    .template-index .wrapper-body,
+    .template-page-customorder .wrapper-body,
+    .template-page-bulkorder .wrapper-body,
+    .template-page-corporategifting .wrapper-body {
         padding-bottom: 0px;
         overflow: hidden;
     }

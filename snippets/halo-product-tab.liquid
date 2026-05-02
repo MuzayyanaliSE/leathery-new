@@ -150,6 +150,12 @@
 							<div class="tab-popup-content">
 						{%- endif -%}
 							{{ content }}
+							{%- if block.type == 'description' -%}
+								<p class="engraving-note" style="margin-top: 12px; padding: 10px 12px; border: 1px solid #B4703E; background: #FBF3EE; color: #1F1B18; border-radius: 6px; font-size: 14px; line-height: 1.5;">
+									<strong>For Engraving:</strong> PKR&nbsp;200 extra charges. Please place your order on
+									<a href="https://wa.me/923041203456" target="_blank" rel="noopener" style="color: #B4703E; font-weight: 600; text-decoration: underline;">WhatsApp</a>.
+								</p>
+							{%- endif -%}
 							{%- if block.settings.enable_btn_show_more -%}
 								{% assign letter = content | size %}
 								<div class="tab-showMore is-show" data-letter="{{ letter }}" data-des-max="{{ block.settings.maximum_des_to_show }}">
