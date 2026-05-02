@@ -1,0 +1,756 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "blocks": {
+        "2e8c7c14-a0ad-4930-a1d8-3def05310426": {
+          "type": "breadcrumb",
+          "settings": {
+            "breadcrumb_layout": "full",
+            "breadcrumb_alignment": "left",
+            "breadcrumb_bg": "rgba(0,0,0,0)",
+            "breadcrumb_gradient": "",
+            "breadcrumb_bg_mb": "#f6f6f6",
+            "breadcrumb_gradient_mb": "",
+            "breadcrumb_mg_top_desktop": 10,
+            "breadcrumb_mg_top_mobile": 0,
+            "breadcrumb_mg_bottom_desktop": 20,
+            "breadcrumb_mg_bottom_mobile": 10
+          }
+        },
+        "b0ea69b7-8a54-4a3c-9abd-0fcceeabaaa0": {
+          "type": "title",
+          "settings": {
+            "fontsize_text": 28,
+            "fontsize_text_mb": 18,
+            "color_title": "#232323",
+            "spacing_top": 0,
+            "spacing_bottom": 10
+          }
+        },
+        "4f95b592-8369-4ab0-b30d-24e463fb6890": {
+          "type": "price",
+          "settings": {
+            "fontsize_text": 18,
+            "spacing_top": 0,
+            "spacing_bottom": 17
+          }
+        },
+        "0e4ea696-4820-4c98-aaa6-806d41782a3d": {
+          "type": "meta",
+          "settings": {
+            "show_sold_in": false,
+            "sold_in_number": "3,5,6,7,8,10,12,15",
+            "sold_in_hours": "10,15,16,17,18,20,25,35",
+            "color_text_sold_in": "#e95144",
+            "spacing_top": 0,
+            "spacing_bottom": 14
+          }
+        },
+        "custom_liquid_Pf6kax": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "<div class=\"product-info-bar\">\n\n \n\n  <span>\n    Cash on Delivery\n  </span>\n\n  <span class=\"cod-box\">\n    COD\n  </span>\n</div>\n\n\n\n<style>\n.product-info-bar {\n  display: flex;\n  flex-wrap: wrap;\n  align-items: center;\n  gap: 8px;\n  font-size: 14px;\n  color: #777;\npadding-bottom:15px;\nborder-bottom: 1px dashed #e5e5e5;\n}\n\n.product-info-bar span {\n  display: flex;\n  align-items: center;\n  gap: 4px;\n}\n\n.product-info-bar .dot {\n  color: #ccc;\n  margin: 0 4px;\n}\n\n.product-info-bar svg {\n  display: inline-block;\n}\n\n.cod-box {\n  background: #ff8c00;\n  color: #fff;\n  font-size: 14px;\n  padding: 2px 6px;\n  border-radius: 4px;\n  font-weight: 600;\n  margin-left: 4px;\n\n}\n\n</style>"
+          }
+        },
+        "product_text_iBTAnm": {
+          "type": "product_text",
+          "settings": {
+            "text": "",
+            "text_icon": "",
+            "text_description": "<h3>{{ custom.what_s_inside_description }}</h3>\n{{ product.metafields.custom.description_what_s_inside | metafield_tag }}",
+            "fontsize_text": 14,
+            "content_spacing": 0,
+            "custom_block_align": "left",
+            "color_title": "#232323",
+            "background_color_block": "#ffffff",
+            "background_gradient_color_block": "",
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "4036f89b-c2c5-49a4-9d6b-2fd29ce7c46c": {
+          "type": "short_description",
+          "disabled": true,
+          "settings": {
+            "show_short_description": true,
+            "word_number": "30",
+            "fontsize_text": 16,
+            "color_text": "#3c3c3c",
+            "spacing_top": 12,
+            "spacing_bottom": 12
+          }
+        },
+        "4e59f24a-8859-4579-a80a-d70e6f1bf66b": {
+          "type": "info",
+          "settings": {
+            "show_vendor": false,
+            "show_sku": true,
+            "show_barcode": false,
+            "show_availability": true,
+            "show_product_type": true,
+            "stock_level_display": "none",
+            "enable_border_top": true,
+            "enable_border_bottom": true,
+            "color_border": "#e6e6e6",
+            "spacing_top": 0,
+            "spacing_bottom": 18
+          }
+        },
+        "5d8b9ff9-6a1c-4850-a6c2-e6cdbb8b7f7c": {
+          "type": "hot_stock",
+          "settings": {
+            "hot_stock_style": "2",
+            "spacing_top": 0,
+            "spacing_bottom": 8
+          }
+        },
+        "bd3a641e-98d0-4da1-ab57-d5e4b0391995": {
+          "type": "countdown",
+          "disabled": true,
+          "settings": {
+            "spacing_top": 0,
+            "spacing_bottom": 20
+          }
+        },
+        "d98e243b-3682-495a-965a-1c7f7d460880": {
+          "type": "variant_picker",
+          "settings": {
+            "picker_type": "button",
+            "show_variant_image_group": true,
+            "enable_border_top": false,
+            "enable_border_bottom": false,
+            "color_border": "#e6e6e6",
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "d97e417a-941b-4a5d-bef3-a651adb918d8": {
+          "type": "variant_description",
+          "settings": {
+            "spacing_top": 0,
+            "spacing_bottom": 12
+          }
+        },
+        "mini_custom_fields_main_product_gkGURW": {
+          "type": "shopify://apps/mini-custom-fields/blocks/main-product/e2bc653a-3a1f-4c8a-af16-5a28d6116641",
+          "settings": {
+            "product": "{{product}}"
+          }
+        },
+        "customization_property_Pj6NyY": {
+          "type": "customization_property",
+          "disabled": true,
+          "settings": {
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "faa2b3e6-c0a1-4269-baa6-d2605efe4c05": {
+          "type": "quantity_selector",
+          "settings": {
+            "qty_style": "1",
+            "qty_layout": "1",
+            "spacing_top": 0,
+            "spacing_bottom": 15
+          }
+        },
+        "04ea8843-f461-4f1d-8ea4-43f62fdfb21e": {
+          "type": "perks",
+          "settings": {
+            "show_size_chart": true,
+            "size_chart_type": "custom_image",
+            "size_chart_page": "",
+            "size_chart_image_type": "jpg",
+            "show_compare_color": false,
+            "show_compare_color_drop_drap": true,
+            "compare_layout": "1",
+            "spacing_top": 0,
+            "spacing_bottom": 22
+          }
+        },
+        "f1b31d90-1e43-4948-9fe3-97ba43f6fb34": {
+          "type": "buy_buttons",
+          "settings": {
+            "show_dynamic_checkout": true,
+            "show_gift_card_recipient": false,
+            "atc_animation": "horizontal-shaking",
+            "atc_color": "#232323",
+            "atc_border_color": "#232323",
+            "atc_bg_color": "#ffffff",
+            "atc_bg_color_gradient": "",
+            "atc_color_hover": "#232323",
+            "atc_border_color_hover": "#232323",
+            "atc_bg_color_hover": "#ffffff",
+            "atc_bg_color_gradient_hover": "",
+            "bin_color": "#ffffff",
+            "bin_border_color": "#acacac",
+            "bin_bg_color": "#b4703e",
+            "bin_bg_color_gradient": "",
+            "bin_color_hover": "#ffffff",
+            "bin_border_color_hover": "#232323",
+            "bin_bg_color_hover": "#232323",
+            "bin_bg_color_hover_gradient": "",
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "custom_liquid_zCWVVG": {
+          "type": "custom_liquid",
+          "settings": {
+            "custom_liquid": "{% assign phone_number = \"+923041203456\" %} <!-- Replace with your WhatsApp number -->\n\n{% assign message = \"Hello, I want to buy this product: \" \n  | append: product.title \n  | append: \" - \" \n  | append: shop.url \n  | append: product.url %}\n\n{% assign encoded_message = message | url_encode %}\n\n<a href=\"https://wa.me/{{ phone_number }}?text={{ encoded_message }}\" \n   target=\"_blank\" \n   style=\"display:block; background:#25D366; color:white; text-align:center; padding:12px; margin-top:10px; border-radius:5px; font-weight:600; text-decoration:none;\">\n   Buy on WhatsApp\n</a>"
+          }
+        },
+        "683f2b15-db3b-4f63-8d0f-e688cc678581": {
+          "type": "customer_viewing",
+          "disabled": true,
+          "settings": {
+            "customer_viewing_number": "283, 100, 59, 11, 14, 185, 193, 165, 50, 38, 99, 112, 46, 10, 125, 200, 250, 18",
+            "customer_viewing_time": 5,
+            "spacing_top": 0,
+            "spacing_bottom": 22
+          }
+        },
+        "19de9abb-17c8-4d67-941d-b32706ed06fd": {
+          "type": "pickup_availability",
+          "settings": {
+            "show_pickup_availability": true,
+            "spacing_top": 0,
+            "spacing_bottom": 27
+          }
+        },
+        "10093fcf-2053-47e9-bedb-841bb0d046fa": {
+          "type": "trust_image",
+          "settings": {
+            "show_trust_image": true,
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "bd066b80-c8e3-4f3e-8280-b27fbf6e9423": {
+          "type": "description",
+          "settings": {
+            "open_tab_mobile": true,
+            "title": "Description",
+            "enable_btn_show_more": false,
+            "maximum_des_to_show": 300
+          }
+        },
+        "3d9ea84d-5527-4bce-abe6-5debef3ec955": {
+          "type": "custom",
+          "settings": {
+            "open_tab_mobile": false,
+            "title": "Shipping & Return",
+            "type": "all",
+            "content": "<h2>Shipping & Delivery</h2>\nLast Updated: February 2026\n\nThank you for shopping at Leathery.pro! Our sole aim is to deliver your premium leather goods efficiently and securely, nationwide or anywhere around the world.\n\n<h3>1. Processing Orders</h3>\nOnce your order and payment are confirmed, we begin processing it within 1 to 2 business days. You will receive a confirmation email with order details and anticipated dispatch timing.\n\n<h3>2. Shipping Methods</h3>\nOur shipping options are based on your location:\n\nDomestic (Pakistan): Standard courier service\n\nInternational: Selected international shipping through trusted courier partners\n\nDelivery times vary and depend on your location and shipping option selected at checkout.\n\n<h3>3. Delivery Timeline</h3>\nThe delivery timeline varies accordingly:\n\nPakistan: 3 to 7 business days\n\nInternational: 10 to 21 business days (custom charges and destination location applicable)\n\nThere may be delays due to customs clearance, local holidays, or carrier disruptions.\n\n<h3>4. Shipping Charges</h3>\nShipping fees are calculated at checkout based on your residence, location, weight of the package, and selected service level.\n\nFree shipping is applicable on orders over PKR 5000 for nationwide delivery.\n\nDiscounts may apply during certain promotions.\n\n<h3>5. Tracking Your Order</h3>\nOnce we dispatch your order, you will receive a tracking number through email or text message. You can use this tracking number to track your delivery status in real time.\n\n<h3>6. Customs, Duties and Taxes</h3>\nFor international orders, customs duties and import taxes may apply in your country. These charges are the responsibility of the recipient unless otherwise specified.\n\n<h3>7. Failed Delivery and Returns</h3>\nSometimes a shipment may return to us due to wrong address, failed delivery attempts, or refusal at customs, for which additional charges may apply to resend the package. \n\nYou can contact our customer support for assistance.\n\n<h3>8. Damaged or Lost Shipments</h3>\nIf your order arrives damaged or is lost during delivery:\n\nClick photos of the package and its contents\n\nContact us within 3 days of delivery\n\nWe will help settle any disputes with the courier service and arrange a replacement or refund, if applicable.\n\n<h3>9. Contact Information</h3>\nFor shipping queries, tracking shipment, or delivery support: Email: leathery.pro@hotmail.com\n\nBusiness Hours: Monday to Saturday | 9:00 AM to 6:00 PM (PKT)",
+            "product_custom_source": "dynamic",
+            "product_tab_key_metafield": "",
+            "enable_btn_show_more": false,
+            "maximum_des_to_show": 300
+          }
+        },
+        "b9d6eb19-10f4-41f8-bfdc-ea10e8b3182a": {
+          "type": "custom",
+          "disabled": true,
+          "settings": {
+            "open_tab_mobile": false,
+            "title": "Custom Tab",
+            "type": "all",
+            "content": "<table>\n    <tbody>\n        <tr>\n            <td class=\"tb-title\">Drostique</td>\n            <td>Nam tempus turpis at metus scelerisque placerat nulla deumantos</td>\n        </tr>\n        <tr>\n            <td class=\"tb-title\">Pharetro Lorem</td>\n            <td>Pellentesque diam dolor elementum etos lobortis des mollis</td>\n        </tr>\n        <tr>\n            <td class=\"tb-title\">Milancelos</td>\n            <td>Donec pretium egestas sapien et mollis</td>\n        </tr>\n        <tr>\n            <td class=\"tb-title\">Pellentesque</td>\n            <td>Sedcus faucibus an sullamcorper mattis drostique des commodo pharetras</td>\n        </tr>\n        <tr>\n            <td class=\"tb-title\">Proin Molestie</td>\n            <td>Pellentesque diam dolor elementum etos lobortis des mollis</td>\n        </tr>\n        <tr>\n            <td class=\"tb-title\">Cosmopolis</td>\n            <td>Donec pretium egestas sapien et mollis</td>\n        </tr>\n    </tbody>\n</table>",
+            "product_custom_source": "dynamic",
+            "product_tab_key_metafield": "",
+            "enable_btn_show_more": false,
+            "maximum_des_to_show": 300
+          }
+        },
+        "19ab1d9f-74b2-4c76-bf2e-1bc749e5c2a3": {
+          "type": "share",
+          "settings": {
+            "show_share": true,
+            "share_layout": "2",
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "a86220cf-8641-4e06-87d3-b5ffa195501b": {
+          "type": "custom_information",
+          "disabled": true,
+          "settings": {
+            "icon": "<svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fal\" data-icon=\"shipping-fast\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 640 512\"><path fill=\"currentColor\" d=\"M280 192c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H40c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h240zm352 192h-24V275.9c0-16.8-6.8-33.3-18.8-45.2l-83.9-83.9c-11.8-12-28.3-18.8-45.2-18.8H416V78.6c0-25.7-22.2-46.6-49.4-46.6H113.4C86.2 32 64 52.9 64 78.6V96H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h240c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8H96V78.6c0-8.1 7.8-14.6 17.4-14.6h253.2c9.6 0 17.4 6.5 17.4 14.6V384H207.6C193 364.7 170 352 144 352c-18.1 0-34.6 6.2-48 16.4V288H64v144c0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16h195.2c-1.1 5.2-1.6 10.5-1.6 16 0 44.2 35.8 80 80 80s80-35.8 80-80c0-5.5-.6-10.8-1.6-16H632c4.4 0 8-3.6 8-8v-16c0-4.4-3.6-8-8-8zm-488 96c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm272-320h44.1c8.4 0 16.7 3.4 22.6 9.4l83.9 83.9c.8.8 1.1 1.9 1.8 2.8H416V160zm80 320c-26.5 0-48-21.5-48-48s21.5-48 48-48 48 21.5 48 48-21.5 48-48 48zm80-96h-16.4C545 364.7 522 352 496 352s-49 12.7-63.6 32H416v-96h160v96zM256 248v-16c0-4.4-3.6-8-8-8H8c-4.4 0-8 3.6-8 8v16c0 4.4 3.6 8 8 8h240c4.4 0 8-3.6 8-8z\"></path></svg>",
+            "color_icon": "#232323",
+            "text": "Free Shipping",
+            "color_title": "#232323",
+            "text_description": "<p>Free standard shipping on orders over $99</p>\n<p>Estimated to be delivered on 12/01/2022 - 15/10/2022.</p>",
+            "color_des": "#4d4d4d",
+            "fontsize_text": 12,
+            "content_popup": "<div class=\"halo-text-format\">\n<p>We can ship to virtually any address in the world. Note that there are restrictions on some products, and some products cannot be shipped to international destinations.</p>\n<p>When you place an order, we will estimate shipping and delivery dates for you based on the availability of your items and the shipping options you choose. Depending on the shipping provider you choose, shipping date estimates may appear on the shipping quotes page.</p>\n<p>Please also note that the shipping rates for many items we sell are weight-based. The weight of any such item can be found on its detail page. To reflect the policies of the shipping companies we use, all weights will be rounded up to the next full pound.</p>\t\t\t\t\t\t</div>",
+            "spacing_top": 0,
+            "spacing_bottom": 12
+          }
+        },
+        "058d88b7-6cce-4aae-a5c4-b8193bbdfa7f": {
+          "type": "custom_information",
+          "disabled": true,
+          "settings": {
+            "icon": "<svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fal\" data-icon=\"shield-alt\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 512 512\">\n    <path fill=\"currentColor\" d=\"M466.5 83.7l-192-80a48.15 48.15 0 0 0-36.9 0l-192 80C27.7 91.1 16 108.6 16 128c0 198.5 114.5 335.7 221.5 380.3 11.8 4.9 25.1 4.9 36.9 0C360.1 472.6 496 349.3 496 128c0-19.4-11.7-36.9-29.5-44.3zM262.2 478.8c-4 1.6-8.4 1.6-12.3 0C152 440 48 304 48 128c0-6.5 3.9-12.3 9.8-14.8l192-80c3.9-1.6 8.4-1.6 12.3 0l192 80c6 2.5 9.9 8.3 9.8 14.8.1 176-103.9 312-201.7 350.8zM256 411V100l-142.7 59.5c10.1 120.1 77.1 215 142.7 251.5zm-32-66.8c-36.4-39.9-65.8-97.8-76.1-164.5L224 148z\"></path>\n</svg>",
+            "color_icon": "#232323",
+            "text": "Free Returns",
+            "color_title": "#232323",
+            "text_description": "Learn More.",
+            "color_des": "#4d4d4d",
+            "fontsize_text": 12,
+            "content_popup": "<div class=\"halo-text-format\">\n\t\t\t\t\t\t\n<p>You may return most new, unopened items within 30 days of delivery for a full refund. We'll also pay the return shipping costs if the return is a result of our error (you received an incorrect or defective item, etc.).</p>\n<p>You should expect to receive your refund within four weeks of giving your package to the return shipper, however, in many cases you will receive a refund more quickly. This time period includes the transit time for us to receive your return from the shipper (5 to 10 business days), the time it takes us to process your return once we receive it (3 to 5 business days), and the time it takes your bank to process our refund request (5 to 10 business days).</p>\n<p>If you need to return an item, simply login to your account, view the order using the \"Complete Orders\" link under the My Account menu and click the Return Item(s) button. We'll notify you via e-mail of your refund once we've received and processed the returned item.</p>\n\t\t\t\t\t\t\t</div>",
+            "spacing_top": 0,
+            "spacing_bottom": 14
+          }
+        },
+        "36addb13-cd73-4713-a15c-7d846c4724e7": {
+          "type": "custom_information",
+          "disabled": true,
+          "settings": {
+            "icon": "<svg aria-hidden=\"true\" focusable=\"false\" data-prefix=\"fal\" data-icon=\"exclamation-triangle\" role=\"img\" xmlns=\"http://www.w3.org/2000/svg\" viewbox=\"0 0 576 512\"><path fill=\"currentColor\" d=\"M270.2 160h35.5c3.4 0 6.1 2.8 6 6.2l-7.5 196c-.1 3.2-2.8 5.8-6 5.8h-20.5c-3.2 0-5.9-2.5-6-5.8l-7.5-196c-.1-3.4 2.6-6.2 6-6.2zM288 388c-15.5 0-28 12.5-28 28s12.5 28 28 28 28-12.5 28-28-12.5-28-28-28zm281.5 52L329.6 24c-18.4-32-64.7-32-83.2 0L6.5 440c-18.4 31.9 4.6 72 41.6 72H528c36.8 0 60-40 41.5-72zM528 480H48c-12.3 0-20-13.3-13.9-24l240-416c6.1-10.6 21.6-10.7 27.7 0l240 416c6.2 10.6-1.5 24-13.8 24z\"></path></svg>",
+            "color_icon": "#232323",
+            "text": "Covid-19 Shipping Delay Notice",
+            "color_title": "#232323",
+            "text_description": "",
+            "color_des": "#999999",
+            "fontsize_text": 12,
+            "content_popup": "<div class=\"halo-text-format\">\n\t\t\t\t\t\t\t\t<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>\n\t\t\t\t\t\t\t</div>",
+            "spacing_top": 0,
+            "spacing_bottom": 0
+          }
+        },
+        "9630b233-8164-4dad-ab64-8830bedf328a": {
+          "type": "complementary_products",
+          "settings": {
+            "complementary_product_title": "Pairs well with",
+            "complementary_product_layout": "2",
+            "complementary_product_limit_1": 2,
+            "complementary_product_limit_2": 3,
+            "complementary_product_arrows": false,
+            "complementary_product_dots": true,
+            "complementary_product_object": "cover",
+            "complementary_product_button_atc": false,
+            "spacing_top": 30,
+            "spacing_bottom": 0
+          }
+        }
+      },
+      "block_order": [
+        "2e8c7c14-a0ad-4930-a1d8-3def05310426",
+        "b0ea69b7-8a54-4a3c-9abd-0fcceeabaaa0",
+        "4f95b592-8369-4ab0-b30d-24e463fb6890",
+        "0e4ea696-4820-4c98-aaa6-806d41782a3d",
+        "custom_liquid_Pf6kax",
+        "product_text_iBTAnm",
+        "4036f89b-c2c5-49a4-9d6b-2fd29ce7c46c",
+        "4e59f24a-8859-4579-a80a-d70e6f1bf66b",
+        "5d8b9ff9-6a1c-4850-a6c2-e6cdbb8b7f7c",
+        "bd3a641e-98d0-4da1-ab57-d5e4b0391995",
+        "d98e243b-3682-495a-965a-1c7f7d460880",
+        "d97e417a-941b-4a5d-bef3-a651adb918d8",
+        "mini_custom_fields_main_product_gkGURW",
+        "customization_property_Pj6NyY",
+        "faa2b3e6-c0a1-4269-baa6-d2605efe4c05",
+        "04ea8843-f461-4f1d-8ea4-43f62fdfb21e",
+        "f1b31d90-1e43-4948-9fe3-97ba43f6fb34",
+        "custom_liquid_zCWVVG",
+        "683f2b15-db3b-4f63-8d0f-e688cc678581",
+        "19de9abb-17c8-4d67-941d-b32706ed06fd",
+        "10093fcf-2053-47e9-bedb-841bb0d046fa",
+        "bd066b80-c8e3-4f3e-8280-b27fbf6e9423",
+        "3d9ea84d-5527-4bce-abe6-5debef3ec955",
+        "b9d6eb19-10f4-41f8-bfdc-ea10e8b3182a",
+        "19ab1d9f-74b2-4c76-bf2e-1bc749e5c2a3",
+        "a86220cf-8641-4e06-87d3-b5ffa195501b",
+        "058d88b7-6cce-4aae-a5c4-b8193bbdfa7f",
+        "36addb13-cd73-4713-a15c-7d846c4724e7",
+        "9630b233-8164-4dad-ab64-8830bedf328a"
+      ],
+      "custom_css": [
+        ".slick-arrow svg {max-width: 100%; max-height: 100%; width: var(--arrow-size-icon); height: var(--arrow-size-icon); color: #ffffff; fill: #60422e; stroke: transparent;}"
+      ],
+      "settings": {
+        "container": "container",
+        "padding_full_width": 15,
+        "show_sticky_info": true,
+        "media_fit": "cover",
+        "product_image_ratio": "portrait",
+        "portrait_aspect_ratio": 101,
+        "video_layout": "popup",
+        "zoomed_image": true,
+        "product_image_popup": "fancybox",
+        "main_image_show_custom_cursor": true,
+        "icon_color": "#000000",
+        "main_image_position": "left",
+        "main_image_layout": "1",
+        "main_image_arrows_desktop": true,
+        "main_image_arrows_mobile": true,
+        "main_image_counter_mobile": true,
+        "main_image_enable_parallax_mb": false,
+        "main_image_show_zoom_icon_mb": true,
+        "show_thumbnail_mobile": true,
+        "thumnail_layout": "3",
+        "thumbnail_to_show": 6,
+        "enable_sticky": false,
+        "sidebar_layout": "layout_1",
+        "sidebar_collapse": "collapse",
+        "sidebar_collapse_default": "expand",
+        "sidebar_position": "left",
+        "sidebar_heading_font": "font_1",
+        "sidebar_heading_font_size": 14,
+        "sidebar_heading_font_weight": "700",
+        "sidebar_heading_text_transform": "uppercase",
+        "show_badge": true,
+        "show_subtotal": true,
+        "subtotal_style": "1",
+        "show_sticky_add_to_cart": true,
+        "sticky_atc_layout": "1",
+        "enable_sticky_add_to_cart_always_mobile": false,
+        "show_sticky_vendor": false,
+        "show_quick_order_list": false,
+        "show_image": false,
+        "show_sku": false,
+        "show_tab": true,
+        "tab_layout": "horizontal",
+        "tab_layout_mobile": "popup",
+        "icon_style_layout": "style_1",
+        "title_font_size": 18,
+        "title_font_size_mb": 16,
+        "font_weight_title": "600",
+        "title_text_transform": "none",
+        "title_padding_top_bottom": 15,
+        "tab_border_color": "#000000",
+        "tab_border_color_rgb": "",
+        "show_product_bundle": true,
+        "background_color": "#f8f8f8",
+        "block_title": "Frequenly Bought Together",
+        "block_title_align": "left",
+        "product_style": "2",
+        "block_image_ratio": "adapt",
+        "bundle_discount": true,
+        "bundle_discount_text": "Get a [discount]% discount buying these products together",
+        "bundle_discount_text_color": "#232323",
+        "total_btn_color": "#ffffff",
+        "total_btn_border": "#232323",
+        "total_btn_bg": "#232323",
+        "total_btn_bg_gradient": "",
+        "total_btn_color_hover": "#232323",
+        "total_btn_border_hover": "#232323",
+        "total_btn_bg_hover": "#ffffff",
+        "total_btn_bg_gradient_hover": "",
+        "block_dots": false,
+        "block_arrows": true,
+        "padding_top": 30,
+        "padding_top_tablet": 30,
+        "padding_top_mobile": 30,
+        "padding_bottom": 70,
+        "padding_bottom_tablet": 40,
+        "padding_bottom_mobile": 30,
+        "mg_top_desktop": 0,
+        "mg_top_tablet": 0,
+        "mg_top_mobile": 0,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0
+      }
+    },
+    "1775639102c13832c5": {
+      "type": "apps",
+      "blocks": {
+        "judge_me_reviews_verified_badge_HkLBw9": {
+          "type": "shopify://apps/judge-me-reviews/blocks/verified_badge/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {}
+        },
+        "judge_me_reviews_review_widget_JpCkKP": {
+          "type": "shopify://apps/judge-me-reviews/blocks/review_widget/61ccd3b1-a9f2-4160-9fe9-4fec8413e5d8",
+          "settings": {
+            "review_data": "sample_data",
+            "max_width": 1200,
+            "show_shop_reviews": false,
+            "empty_state": "empty_widget"
+          }
+        }
+      },
+      "block_order": [
+        "judge_me_reviews_verified_badge_HkLBw9",
+        "judge_me_reviews_review_widget_JpCkKP"
+      ],
+      "settings": {
+        "include_margins": false
+      }
+    },
+    "rich_text_6LAPkt": {
+      "type": "rich-text",
+      "blocks": {
+        "heading_b3g4iQ": {
+          "type": "heading",
+          "settings": {
+            "heading": "Get Yours Before It’s Gone",
+            "heading_size": 30,
+            "heading_size_mb": 26,
+            "heading_line_height": 1.3,
+            "heading_color": "#000000"
+          }
+        },
+        "text_zjNTJ9": {
+          "type": "text",
+          "settings": {
+            "text": "Functional long wallets with secure closure don’t stay in stock for long. When you are in need of a reliable leather wallet for men, which is both organized and stylish, this is your step.\nAdd it to your cart today.",
+            "text_size": 16,
+            "text_size_mb": 12,
+            "text_font_weight": "400",
+            "text_line_height": 1.5,
+            "margin_top_text": 20,
+            "text_color": "#000000",
+            "text_width": "800px"
+          }
+        }
+      },
+      "block_order": [
+        "heading_b3g4iQ",
+        "text_zjNTJ9"
+      ],
+      "disabled": true,
+      "custom_css": [
+        ".center,.text-center {border: 1px dotted; border-radius: 25px; padding: 15px;}"
+      ],
+      "name": "t:sections.rich-text.presets.name",
+      "settings": {
+        "container": "1170",
+        "padding_full_width": 0,
+        "enable_border_top": false,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#232323",
+        "enable_minus_mg_top": false,
+        "minus_spacing_top": -100,
+        "rich_text_bg": "#ffffff",
+        "rich_text_bg_gradient": "",
+        "enable_column": false,
+        "content_align": "center",
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    },
+    "product-recommendations": {
+      "type": "product-recommendations",
+      "settings": {
+        "display_product_block": true,
+        "product_block_container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": true,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "border_style": "container",
+        "mg_top_desktop": 40,
+        "mg_top_tablet": 35,
+        "mg_top_mobile": 35,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "product_block_layout": "slider",
+        "product_bg": "#ffffff",
+        "style_block_header": "style1",
+        "product_block_title": "Related Products",
+        "enable_border_title": false,
+        "mg_top_title": 27,
+        "mg_bottom_title": 3,
+        "fontsize_title": 42,
+        "fontsize_title_mb": 18,
+        "color_title": "#232323",
+        "border_color_title": "#232323",
+        "product_block_title_align": "center",
+        "product_block_limit": 10,
+        "grid_gap": 30,
+        "product_block_per_row": "4",
+        "product_block_swipe_on_mobile": true,
+        "product_block_dots": false,
+        "product_block_dots_mb": true,
+        "product_block_arrows": true,
+        "product_block_arrows_mb": false,
+        "product_block_show": "4",
+        "product_block_per_view": "4",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_layout_special": false,
+        "bg_card": "#ffffff",
+        "padding_card": 15,
+        "border_radius_card": 5,
+        "border_layout_card": "full",
+        "border_width_card": 5,
+        "border_color_card": "#f0f1f4"
+      }
+    },
+    "product-recently-viewed": {
+      "type": "product-recently-viewed",
+      "settings": {
+        "display_product_recently_viewed": true,
+        "product_recently_viewed_container": "container",
+        "padding_full_width": 0,
+        "enable_border_top": true,
+        "enable_border_bottom": false,
+        "color_border_bottom": "#e8e8e8",
+        "border_style": "container",
+        "mg_top_desktop": 80,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 30,
+        "mg_bottom_desktop": 0,
+        "mg_bottom_tablet": 0,
+        "mg_bottom_mobile": 0,
+        "product_recently_viewed_layout": "slider",
+        "product_bg": "#ffffff",
+        "product_bg_gradient": "",
+        "style_block_header": "style1",
+        "product_recently_viewed_title": "Recently Viewed Products",
+        "enable_border_title": false,
+        "mg_top_title": 27,
+        "mg_bottom_title": 3,
+        "fontsize_title": 42,
+        "fontsize_title_mb": 26,
+        "border_color_title": "#232323",
+        "color_title": "#232323",
+        "product_recently_viewed_title_align": "center",
+        "product_recently_viewed_limit": 10,
+        "product_recently_viewed_image_ratio": "adapt",
+        "grid_gap": 30,
+        "product_recently_viewed_per_row": "4",
+        "product_recently_viewed_swipe_on_mobile": true,
+        "product_recently_viewed_dots": false,
+        "product_recently_viewed_dots_mb": true,
+        "product_recently_viewed_arrows": true,
+        "product_recently_viewed_arrows_mb": false,
+        "product_recently_viewed_show": "4",
+        "product_block_per_view": "4",
+        "show_half": true,
+        "scroll_height": 4,
+        "scroll_track_bg": "#f1f1f1",
+        "scroll_thumb_color": "#000000",
+        "scroll_thumb_hover_color": "#444444",
+        "enable_layout_special": false,
+        "bg_card": "#ffffff",
+        "padding_card": 15,
+        "border_radius_card": 5,
+        "border_layout_card": "full",
+        "border_width_card": 5,
+        "border_color_card": "#f0f1f4"
+      }
+    },
+    "newsletter_UmKiVC": {
+      "type": "newsletter",
+      "blocks": {
+        "newsletter_PxLiCq": {
+          "type": "newsletter",
+          "settings": {
+            "newsletter_content_direction": "column",
+            "newsletter_form_justify_content": "center",
+            "spacing_tb": 75,
+            "custom_width": false,
+            "width": "1000",
+            "section_title": "Join the Leathery PRO Club",
+            "special_text": "",
+            "section_title_font_size": 32,
+            "section_title_font_size_mb": 26,
+            "section_title_font_weight": "600",
+            "section_title_text_transform": "none",
+            "section_title_font_style": "normal",
+            "section_title_color": "#ffffff",
+            "mg_bottom_title": 12,
+            "mg_bottom_title_mb": 12,
+            "section_subtitle": "By subscribing, you agree to our Terms & Conditions and Privacy Policy.",
+            "section_subtitle_font_size": 16,
+            "section_subtitle_font_size_mb": 14,
+            "section_subtitle_font_weight": "400",
+            "section_subtitle_text_transform": "none",
+            "section_subtitle_font_style": "normal",
+            "section_subtitle_color": "#ffffff",
+            "mg_bottom_subtitle": 0,
+            "mg_bottom_subtitle_mb": 0,
+            "show_between_input_button": false,
+            "section_description": "<p>Subscribe to receive updates on new arrivals, special offers, and exclusive leather care tips.<br/></p>",
+            "section_description_font_size": 16,
+            "section_description_font_size_mb": 14,
+            "section_description_font_weight": "500",
+            "section_description_color": "#ffffff",
+            "margin_bottom_des": 17,
+            "button_style": "text",
+            "button_text": "Subscribe",
+            "button_font_size": 16,
+            "button_width": 150,
+            "button_border_radius": 5,
+            "button_text_color": "#ffffff",
+            "button_border_color": "#232323",
+            "button_background_color": "#b4703e",
+            "button_gradient_color": "",
+            "button_text_color_hover": "#ffffff",
+            "button_border_color_hover": "#232323",
+            "button_background_color_hover": "#232323",
+            "button_gradient_color_hover": "",
+            "button_text_transform": "capitalize",
+            "button_font_weight": "600",
+            "show_box_shadow_button": false,
+            "shadow_color_button": "rgba(0,0,0,0)",
+            "show_input_field": true,
+            "input_style": "style_1",
+            "input_placeholder": "Your email address",
+            "input_text_font_size": 13,
+            "input_width": 800,
+            "input_border_radius": 5,
+            "input_placeholder_color": "#ffffff",
+            "input_background_color": "#37342a",
+            "input_border_color": "#333333",
+            "form_gap": 15,
+            "input_width_behavior": "auto",
+            "show_box_shadow_input": true,
+            "shadow_color_input": "rgba(0,0,0,0)"
+          }
+        }
+      },
+      "block_order": [
+        "newsletter_PxLiCq"
+      ],
+      "disabled": true,
+      "name": "t:sections.newsletter.name",
+      "settings": {
+        "container": "container",
+        "padding_full_width": 0,
+        "background": "#47270f",
+        "background_gradient": "",
+        "enable_parallax": true,
+        "section_text_align": "center",
+        "justify_section_content": "center",
+        "section_item_distance": 20,
+        "enable_social_media_below": false,
+        "mg_top_desktop": 50,
+        "mg_top_tablet": 50,
+        "mg_top_mobile": 50,
+        "mg_bottom_desktop": 50,
+        "mg_bottom_tablet": 50,
+        "mg_bottom_mobile": 50
+      }
+    }
+  },
+  "order": [
+    "main",
+    "1775639102c13832c5",
+    "rich_text_6LAPkt",
+    "product-recommendations",
+    "product-recently-viewed",
+    "newsletter_UmKiVC"
+  ]
+}

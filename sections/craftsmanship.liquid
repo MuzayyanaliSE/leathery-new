@@ -1,0 +1,383 @@
+{%- style -%}
+  .section-{{ section.id }}-padding {
+    padding-top: {{ section.settings.padding_top }}px;
+    padding-bottom: {{ section.settings.padding_bottom }}px;
+    background-color: {{ section.settings.page_bg_color }};
+  }
+
+  .craft-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background-color: {{ section.settings.container_bg_color }};
+    border-radius: 40px;
+    position: relative;
+    padding: 70px 80px 40px 80px;
+    display: flex;
+    flex-direction: column;
+  }
+
+  /* Watermarks */
+  .craft-watermark {
+    position: absolute;
+    opacity: 0.03;
+    pointer-events: none;
+    z-index: 1;
+    max-width: 350px;
+  }
+  .craft-watermark.left { top: 10%; left: -5%; }
+  .craft-watermark.right { top: -5%; right: -5%; transform: scaleX(-1); }
+
+  .craft-main-title {
+    text-align: center;
+    
+    font-size: clamp(5.2rem, 4vw, 3rem);
+    font-weight: 700;
+    margin-bottom: 60px;
+    color: #111;
+    z-index: 2;
+    position: relative;
+  }
+
+  .craft-content-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+    z-index: 2;
+    position: relative;
+  }
+
+  /* Left Text Column */
+  .craft-text-side {
+    flex: 1;
+    max-width: 480px;
+  }
+
+  .craft-heading-1 {
+    
+    font-size: clamp(3rem, 3.5vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 0;
+    color: #222;
+  }
+
+  .craft-heading-2 {
+    
+    font-size: clamp(3rem, 3.5vw, 2.8rem);
+    font-weight: 600;
+    line-height: 1.1;
+    margin: 5px 0 25px 0;
+    color: {{ section.settings.gold_color }};
+  }
+
+  .craft-text-side p {
+    
+    font-size: 15px;
+    color: #000000;
+    line-height: 1.6;
+    margin-bottom: 35px;
+  }
+
+  .craft-bullets {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 15px 25px;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+
+  .craft-bullets li {
+   
+    font-size: 13px;
+    font-weight: 600;
+    color: {{ section.settings.gold_color }};
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    text-transform: capitalize;
+  }
+
+  .craft-bullets li::before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: #444;
+    border-radius: 50%;
+  }
+
+  /* Right Image Collage - Pixel Perfect Percentage Layout */
+  .craft-image-side {
+    flex: 1;
+    width: 100%;
+    position: relative;
+  }
+
+  .craft-collage {
+    position: relative;
+    width: 100%;
+    aspect-ratio: 0.95; /* Keeps the collage proportion perfectly scaled */
+  }
+
+  .craft-img-abs {
+    position: absolute;
+    object-fit: cover;
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
+    background-color: #eee;
+    transition: transform 0.3s ease;
+  }
+
+  .craft-img-abs:hover {
+    transform: translateY(-5px);
+  }
+
+  /* Desktop Exact Positioning */
+  .img-bag     { top: 10%; left: 5%;  width: 36%; height: 35%; border-radius: 24px; }
+  .img-texture { top: 0%;  right: 5%; width: 45%; height: 15%; border-radius: 12px; }
+  .img-wallet  { top: 20%; right: 5%; width: 45%; height: 28%; border-radius: 20px; }
+  .img-hands   { top: 50%; left: 0%;  width: 45%; height: 40%; border-radius: 24px; }
+  .img-jacket  { top: 54%; right: 0%; width: 50%; height: 60%; border-radius: 24px; z-index: 2; }
+
+
+  /* Mobile Layout */
+  @media screen and (max-width: 900px) {
+    .craft-container {
+      padding: 50px 30px 40px 30px;
+      margin: 0 15px;
+    }
+    .craft-main-title { margin-bottom: 40px; }
+    .craft-content-wrapper { 
+      flex-direction: column; 
+      text-align: center; 
+      gap: 50px; 
+    }
+    .craft-text-side { max-width: 100%; }
+    .craft-bullets { justify-content: center; }
+    
+    .craft-collage {
+      aspect-ratio: 1.05; 
+      max-width: 500px; /* Keeps it from getting too huge on tablets */
+      margin: 0 auto;
+    }
+
+    /* Mobile Exact Positioning (Based strictly on your provided screenshot) */
+    .img-bag     { top: 0%;  left: 0%;  width: 31%; height: 30%; border-radius: 16px; }
+    .img-texture { top: 8%;  left: 33%; width: 34%; height: 14%; border-radius: 10px; }
+    .img-wallet  { top: 0%;  right: 0%; width: 31%; height: 26%; border-radius: 16px; }
+    .img-hands   { top: 34%; left: 0%;  width: 42%; height: 45%; border-radius: 16px; }
+    .img-jacket  { top: 30%; right: 0%; width: 54%; height: 85%; border-radius: 16px; z-index: 2; }
+  }
+
+  @media screen and (max-width: 480px) {
+    .craft-container { padding: 40px 20px 40px 20px; }
+    .img-bag     { border-radius: 12px; }
+    .img-texture { border-radius: 8px; }
+    .img-wallet  { border-radius: 12px; }
+    .img-hands   { border-radius: 12px; }
+    .img-jacket  { border-radius: 12px; }
+  }
+{%- endstyle -%}
+
+<div class="section-{{ section.id }}-padding">
+  <div class="craft-container">
+    
+    {% if section.settings.watermark_image != blank %}
+      <img src="{{ section.settings.watermark_image | img_url: '400x' }}" alt="" class="craft-watermark left">
+      <img src="{{ section.settings.watermark_image | img_url: '400x' }}" alt="" class="craft-watermark right">
+    {% endif %}
+
+    <h2 class="craft-main-title">{{ section.settings.main_title }}</h2>
+
+    <div class="craft-content-wrapper">
+      
+      <!-- Left Text -->
+      <div class="craft-text-side">
+        <h3 class="craft-heading-1">{{ section.settings.heading_1 }}</h3>
+        <h3 class="craft-heading-2">{{ section.settings.heading_2 }}</h3>
+        <p>{{ section.settings.paragraph }}</p>
+        
+        <ul class="craft-bullets">
+          {% if section.settings.bullet_1 != blank %}<li>{{ section.settings.bullet_1 }}</li>{% endif %}
+          {% if section.settings.bullet_2 != blank %}<li>{{ section.settings.bullet_2 }}</li>{% endif %}
+          {% if section.settings.bullet_3 != blank %}<li>{{ section.settings.bullet_3 }}</li>{% endif %}
+        </ul>
+      </div>
+
+      <!-- Right Collage Container -->
+      <div class="craft-image-side">
+        <div class="craft-collage">
+          
+          {% if section.settings.img_bag %}
+            <img src="{{ section.settings.img_bag | img_url: '500x' }}" class="craft-img-abs img-bag" alt="Tote Bag" loading="lazy">
+          {% else %}
+            {{ 'product-1' | placeholder_svg_tag: 'craft-img-abs img-bag' }}
+          {% endif %}
+
+          {% if section.settings.img_texture %}
+            <img src="{{ section.settings.img_texture | img_url: '500x' }}" class="craft-img-abs img-texture" alt="Leather Texture" loading="lazy">
+          {% else %}
+             {{ 'collection-1' | placeholder_svg_tag: 'craft-img-abs img-texture' }}
+          {% endif %}
+
+          {% if section.settings.img_wallet %}
+            <img src="{{ section.settings.img_wallet | img_url: '500x' }}" class="craft-img-abs img-wallet" alt="Wallet" loading="lazy">
+          {% else %}
+            {{ 'product-2' | placeholder_svg_tag: 'craft-img-abs img-wallet' }}
+          {% endif %}
+
+          {% if section.settings.img_hands %}
+            <img src="{{ section.settings.img_hands | img_url: '500x' }}" class="craft-img-abs img-hands" alt="Crafting Hands" loading="lazy">
+          {% else %}
+            {{ 'lifestyle-1' | placeholder_svg_tag: 'craft-img-abs img-hands' }}
+          {% endif %}
+
+          {% if section.settings.img_jacket %}
+            <img src="{{ section.settings.img_jacket | img_url: '600x' }}" class="craft-img-abs img-jacket" alt="Leather Jacket" loading="lazy">
+          {% else %}
+             {{ 'product-3' | placeholder_svg_tag: 'craft-img-abs img-jacket' }}
+          {% endif %}
+
+        </div>
+      </div>
+      
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Our Craftsmanship",
+  "settings":[
+    {
+      "type": "header",
+      "content": "Text Settings"
+    },
+    {
+      "type": "text",
+      "id": "main_title",
+      "label": "Main Top Title",
+      "default": "Our Craftsmanship"
+    },
+    {
+      "type": "text",
+      "id": "heading_1",
+      "label": "Heading 1 (Dark)",
+      "default": "Handmade in Pakistan."
+    },
+    {
+      "type": "text",
+      "id": "heading_2",
+      "label": "Heading 2 (Gold)",
+      "default": "Perfected for the World."
+    },
+    {
+      "type": "textarea",
+      "id": "paragraph",
+      "label": "Paragraph Text",
+      "default": "Every piece tells a story of dedication, skill, and passion. Our master craftsmen blend traditional techniques with modern design to create leather goods that stand the test of time."
+    },
+    {
+      "type": "text",
+      "id": "bullet_1",
+      "label": "Bullet Point 1",
+      "default": "Premium Cowhide"
+    },
+    {
+      "type": "text",
+      "id": "bullet_2",
+      "label": "Bullet Point 2",
+      "default": "Skilled Artisans"
+    },
+    {
+      "type": "text",
+      "id": "bullet_3",
+      "label": "Bullet Point 3",
+      "default": "Heritage Techniques"
+    },
+    {
+      "type": "header",
+      "content": "Images (Collage)"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_texture",
+      "label": "Texture Image (Horizontal Pill shape)"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_bag",
+      "label": "Bag Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_wallet",
+      "label": "Wallet Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_hands",
+      "label": "Crafting Hands Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "img_jacket",
+      "label": "Jacket Image (Vertical - Overlaps bottom)"
+    },
+    {
+      "type": "image_picker",
+      "id": "watermark_image",
+      "label": "Background Watermark Logo (Optional)"
+    },
+    {
+      "type": "header",
+      "content": "Colors & Spacing"
+    },
+    {
+      "type": "color",
+      "id": "gold_color",
+      "label": "Gold Accent Color",
+      "default": "#d19f3a"
+    },
+    {
+      "type": "color",
+      "id": "container_bg_color",
+      "label": "Container Background Color",
+      "default": "#f4f4f4"
+    },
+    {
+      "type": "color",
+      "id": "page_bg_color",
+      "label": "Outer Page Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 4,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 150,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding (Keep high for jacket overlap)",
+      "default": 130
+    }
+  ],
+  "presets":[
+    {
+      "name": "Our Craftsmanship",
+      "category": "Image"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,1392 @@
+{% liquid
+  assign sid = 'lh-bulk-' | append: section.id
+%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" rel="stylesheet">
+
+<style>
+  #{{ sid }},
+  #{{ sid }} *,
+  #{{ sid }} *::before,
+  #{{ sid }} *::after {
+    box-sizing: border-box;
+  }
+
+  #{{ sid }} {
+    --brand: #B4703E;
+    --brand-deep: #6F4627;
+    --brand-darker: #4E2F18;
+    --brand-soft: #F4BB92;
+    --brand-tint: #FFE3D1;
+    --surface: #FFF8F5;
+    --surface-low: #FCF1EC;
+    --surface-high: #F1E6E1;
+    --ink: #1F1B18;
+    --ink-2: #51443C;
+    --ink-3: #635D5E;
+    --line: #D5C3B8;
+    --line-soft: rgba(131, 116, 107, 0.18);
+
+    font-family: "Inter", system-ui, sans-serif !important;
+    color: var(--ink) !important;
+    background: var(--surface);
+    -webkit-font-smoothing: antialiased;
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    line-height: 1.5;
+  }
+
+  #{{ sid }} a,
+  #{{ sid }} a:hover,
+  #{{ sid }} a:focus,
+  #{{ sid }} a:active {
+    text-decoration: none !important;
+  }
+
+  #{{ sid }} img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+  }
+
+  #{{ sid }} h1,
+  #{{ sid }} h2,
+  #{{ sid }} h3,
+  #{{ sid }} h4,
+  #{{ sid }} h5,
+  #{{ sid }} h6,
+  #{{ sid }} p,
+  #{{ sid }} ul,
+  #{{ sid }} ol,
+  #{{ sid }} li,
+  #{{ sid }} figure,
+  #{{ sid }} dl,
+  #{{ sid }} dt,
+  #{{ sid }} dd {
+    margin: 0;
+    padding: 0;
+  }
+
+  #{{ sid }} .material-symbols-outlined {
+    font-variation-settings:
+      "FILL" 0,
+      "wght" 300,
+      "GRAD" 0,
+      "opsz" 24;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  #{{ sid }} .lh-wrap {
+    width: min(100% - 48px, 1280px);
+    margin: 0 auto;
+  }
+
+  #{{ sid }} .lh-display {
+    font-family: "Phudu", Impact, sans-serif !important;
+    font-weight: 800 !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  #{{ sid }} .lh-display-md {
+    font-family: "Phudu", Impact, sans-serif !important;
+    font-weight: 800 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.018em !important;
+  }
+
+  #{{ sid }} .lh-eyebrow {
+    display: inline-block;
+    font-family: "Inter", system-ui, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 11px !important;
+    letter-spacing: 0.32em !important;
+    text-transform: uppercase !important;
+  }
+
+  #{{ sid }} .lh-section {
+    padding: 96px 0;
+  }
+
+  #{{ sid }} .lh-hero {
+    position: relative;
+    min-height: 880px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    color: var(--surface);
+  }
+
+  #{{ sid }} .lh-hero__media,
+  #{{ sid }} .lh-hero__scrim {
+    position: absolute;
+    inset: 0;
+  }
+
+  #{{ sid }} .lh-hero__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.25) brightness(0.45);
+  }
+
+  #{{ sid }} .lh-hero__scrim {
+    background:
+      linear-gradient(
+        180deg,
+        rgba(31, 27, 24, 0.3) 0%,
+        rgba(31, 27, 24, 0.55) 70%,
+        rgba(31, 27, 24, 0.85) 100%
+      ),
+      radial-gradient(
+        80% 60% at 20% 30%,
+        rgba(180, 112, 62, 0.2) 0%,
+        transparent 70%
+      );
+  }
+
+  #{{ sid }} .lh-hero__content {
+    position: relative;
+    z-index: 2;
+    width: min(100% - 48px, 1280px);
+    margin: 0 auto;
+    padding-top: 128px;
+    padding-bottom: 192px;
+  }
+
+  #{{ sid }} .lh-hero__eyebrow {
+    color: var(--brand-soft);
+    background: rgba(180, 112, 62, 0.2);
+    padding: 6px 12px;
+  }
+
+  #{{ sid }} .lh-hero__title {
+    color: var(--surface) !important;
+    font-size: clamp(40px, 6vw, 72px) !important;
+    margin-top: 24px !important;
+    max-width: 960px;
+  }
+
+  #{{ sid }} .lh-hero__title span {
+    display: block;
+    color: var(--brand-soft);
+    font-weight: 700;
+    font-size: clamp(32px, 4.6vw, 56px);
+    margin-top: 4px;
+    letter-spacing: -0.015em;
+  }
+
+  #{{ sid }} .lh-hero__text {
+    font-size: clamp(18px, 2vw, 20px);
+    font-weight: 300;
+    line-height: 1.7;
+    color: rgba(255, 248, 245, 0.85);
+    max-width: 640px;
+    margin-top: 28px !important;
+  }
+
+  #{{ sid }} .lh-btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  #{{ sid }} .lh-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 56px;
+    padding: 0 28px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: 0.25s ease;
+    cursor: pointer;
+  }
+
+  #{{ sid }} .lh-btn--primary {
+    background: var(--brand);
+    color: #fff !important;
+  }
+
+  #{{ sid }} .lh-btn--primary:hover {
+    background: var(--brand-deep);
+    color: #fff !important;
+  }
+
+  #{{ sid }} .lh-btn--ghost {
+    background: transparent;
+    color: var(--surface) !important;
+    border: 1px solid rgba(255, 248, 245, 0.4);
+  }
+
+  #{{ sid }} .lh-btn--ghost:hover {
+    background: var(--surface);
+    color: var(--ink) !important;
+    border-color: var(--surface);
+  }
+
+  #{{ sid }} .lh-hero__stats {
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: 2;
+    background: rgba(20, 16, 14, 0.88);
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+    padding: 28px 0;
+  }
+
+  #{{ sid }} .lh-stats {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 32px;
+  }
+
+  #{{ sid }} .lh-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  #{{ sid }} .lh-stat strong {
+    font-size: 32px;
+    color: var(--surface);
+  }
+
+  #{{ sid }} .lh-stat span {
+    font-size: 10px;
+    letter-spacing: 0.28em;
+    text-transform: uppercase;
+    color: var(--line);
+  }
+
+  #{{ sid }} .lh-stat-divider {
+    width: 1px;
+    height: 36px;
+    background: rgba(255, 255, 255, 0.1);
+  }
+
+  #{{ sid }} .lh-surface {
+    background: var(--surface);
+  }
+
+  #{{ sid }} .lh-surface-low {
+    background: var(--surface-low);
+  }
+
+  #{{ sid }} .lh-ink {
+    background: var(--ink);
+    color: var(--surface);
+  }
+
+  #{{ sid }} .lh-surface-high {
+    background: var(--surface-high);
+  }
+
+  #{{ sid }} .lh-header-split {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+
+  #{{ sid }} .lh-header-split p {
+    max-width: 380px;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--ink-2);
+    font-weight: 400;
+  }
+
+  #{{ sid }} .lh-section-title {
+    font-size: clamp(36px, 4.8vw, 58px) !important;
+    color: var(--ink) !important;
+    margin-top: 12px !important;
+  }
+
+  #{{ sid }} .lh-section-title--light {
+    color: var(--surface) !important;
+    margin-top: 16px !important;
+  }
+
+  #{{ sid }} .lh-competency-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 1px;
+    background: rgba(213, 195, 184, 0.3);
+    border: 1px solid rgba(213, 195, 184, 0.3);
+  }
+
+  #{{ sid }} .lh-card {
+    background: var(--surface);
+    padding: 40px;
+    transition: background 0.25s ease;
+  }
+
+  #{{ sid }} .lh-card:hover {
+    background: var(--surface-low);
+  }
+
+  #{{ sid }} .lh-card--accent {
+    background: rgba(180, 112, 62, 0.06);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #{{ sid }} .lh-card--accent:hover {
+    background: rgba(180, 112, 62, 0.1);
+  }
+
+#{{ sid }} .lh-card__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 54px;
+  line-height: 1;
+  color: var(--brand);
+  margin-bottom: 24px;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 500,
+    "GRAD" 0,
+    "opsz" 48;
+}
+  #{{ sid }} .lh-card__title {
+    font-size: 20px !important;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    margin-bottom: 10px !important;
+    color: var(--ink) !important;
+  }
+
+  #{{ sid }} .lh-card__text {
+    font-size: 15px;
+    line-height: 1.75;
+    color: var(--ink-2);
+  }
+
+  #{{ sid }} .lh-card__accent-text {
+    font-size: 20px !important;
+    color: var(--brand) !important;
+    font-style: italic;
+    font-weight: 600;
+    text-align: center;
+    line-height: 1.4;
+  }
+
+  #{{ sid }} .lh-centered-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  #{{ sid }} .lh-centered-header .lh-underline {
+    width: 64px;
+    height: 3px;
+    background: var(--brand);
+    margin: 20px auto 0;
+  }
+
+  #{{ sid }} .lh-feature-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 32px;
+  }
+
+  #{{ sid }} .lh-feature {
+    text-align: center;
+  }
+
+#{{ sid }} .lh-feature__icon-box {
+  width: 96px;
+  height: 96px;
+  background: #fff;
+  border: 1px solid rgba(180, 112, 62, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+#{{ sid }} .lh-feature__icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 46px;
+  line-height: 1;
+  color: var(--brand);
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 500,
+    "GRAD" 0,
+    "opsz" 48;
+}
+
+  #{{ sid }} .lh-feature__title {
+    font-size: 19px !important;
+    color: var(--ink) !important;
+    margin-bottom: 8px !important;
+  }
+
+  #{{ sid }} .lh-feature__text {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink-2);
+    max-width: 260px;
+    margin: 0 auto;
+  }
+
+  #{{ sid }} .lh-process {
+    position: relative;
+  }
+
+  #{{ sid }} .lh-process::before {
+    content: "";
+    position: absolute;
+    top: 36px;
+    left: 8%;
+    right: 8%;
+    height: 1px;
+    background: rgba(244, 187, 146, 0.25);
+    z-index: 0;
+  }
+
+  #{{ sid }} .lh-process-grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 32px;
+    list-style: none;
+  }
+
+  #{{ sid }} .lh-step {
+    position: relative;
+    z-index: 1;
+  }
+
+  #{{ sid }} .lh-step__num {
+    width: 72px;
+    height: 72px;
+    border-radius: 999px;
+    background: var(--brand);
+    color: #fff;
+    border: 4px solid var(--ink);
+    box-shadow: 0 0 0 1px rgba(244, 187, 146, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  #{{ sid }} .lh-step__title {
+    font-size: 18px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--surface) !important;
+    margin-bottom: 8px !important;
+  }
+
+  #{{ sid }} .lh-step__text {
+    font-size: 14px;
+    line-height: 1.5;
+    color: rgba(255, 248, 245, 0.8);
+  }
+
+  #{{ sid }} .lh-split {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    gap: 80px;
+    align-items: center;
+  }
+
+  #{{ sid }} .lh-figure {
+    position: relative;
+  }
+
+  #{{ sid }} .lh-figure img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+  }
+
+  #{{ sid }} .lh-figure::after {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    right: -32px;
+    bottom: -32px;
+    border: 12px solid rgba(180, 112, 62, 0.2);
+    z-index: -1;
+  }
+
+  #{{ sid }} .lh-copy {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #{{ sid }} .lh-copy p {
+    font-size: 17px;
+    line-height: 1.8;
+    color: var(--ink-2);
+    font-weight: 400;
+    max-width: 520px;
+  }
+
+  #{{ sid }} .lh-dl {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    margin-top: 8px;
+  }
+
+  #{{ sid }} .lh-dl dt {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+    color: var(--brand);
+    margin-bottom: 6px !important;
+  }
+
+  #{{ sid }} .lh-dl dd {
+    font-size: 15px;
+    line-height: 1.55;
+    color: var(--ink-2);
+  }
+
+  #{{ sid }} .lh-faq-wrap {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  #{{ sid }} .lh-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #{{ sid }} details > summary {
+    list-style: none;
+  }
+
+  #{{ sid }} details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  #{{ sid }} .lh-faq {
+    background: #fff;
+    border: 1px solid var(--line-soft);
+    padding: 24px;
+    transition: border-color 0.25s ease;
+  }
+
+  #{{ sid }} .lh-faq[open] {
+    border-color: rgba(180, 112, 62, 0.45);
+  }
+
+  #{{ sid }} .lh-faq__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    cursor: pointer;
+    font-size: 19px !important;
+    color: var(--ink) !important;
+  }
+
+  #{{ sid }} .lh-faq__icon {
+    color: var(--brand);
+    transition: transform 0.22s cubic-bezier(0.2, 0.8, 0.2, 1);
+    flex-shrink: 0;
+  }
+
+  #{{ sid }} .lh-faq[open] .lh-faq__icon {
+    transform: rotate(180deg);
+  }
+
+  #{{ sid }} .lh-faq__text {
+    margin-top: 14px !important;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--ink-3);
+    max-width: 680px;
+  }
+
+  #{{ sid }} .lh-cta {
+    position: relative;
+    overflow: hidden;
+  }
+
+  #{{ sid }} .lh-cta::before {
+    content: "";
+    position: absolute;
+    right: -10%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(180, 112, 62, 0.08);
+    transform: skewX(-12deg);
+  }
+
+  #{{ sid }} .lh-cta__inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  #{{ sid }} .lh-cta__title {
+    font-size: clamp(46px, 6.2vw, 88px) !important;
+    color: var(--ink) !important;
+    max-width: 900px;
+  }
+
+  #{{ sid }} .lh-cta__text {
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.75;
+    color: var(--ink-2);
+    max-width: 640px;
+    font-weight: 400;
+  }
+
+  #{{ sid }} .lh-contact-list {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 32px;
+    margin-top: 8px;
+  }
+
+  #{{ sid }} .lh-contact-list a {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink-3) !important;
+    transition: color 0.25s ease;
+  }
+
+  #{{ sid }} .lh-contact-list a:hover {
+    color: var(--brand) !important;
+  }
+
+  #{{ sid }} .lh-contact-list .material-symbols-outlined {
+    font-size: 20px;
+    color: var(--brand);
+  }
+
+  @media (max-width: 1199px) {
+    #{{ sid }} .lh-competency-grid,
+    #{{ sid }} .lh-feature-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #{{ sid }} .lh-process::before {
+      display: none;
+    }
+
+    #{{ sid }} .lh-process-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    #{{ sid }} .lh-split {
+      grid-template-columns: 1fr;
+      gap: 56px;
+    }
+
+    #{{ sid }} .lh-figure::after {
+      display: none;
+    }
+  }
+
+  @media (max-width: 767px) {
+    #{{ sid }} .lh-wrap,
+    #{{ sid }} .lh-hero__content {
+      width: min(100% - 32px, 1280px);
+    }
+
+    #{{ sid }} .lh-section {
+      padding: 72px 0;
+    }
+
+    #{{ sid }} .lh-hero {
+      min-height: 760px;
+    }
+
+    #{{ sid }} .lh-hero__content {
+      padding-top: 96px;
+      padding-bottom: 160px;
+    }
+
+    #{{ sid }} .lh-header-split {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 40px;
+    }
+
+    #{{ sid }} .lh-competency-grid,
+    #{{ sid }} .lh-feature-grid,
+    #{{ sid }} .lh-process-grid,
+    #{{ sid }} .lh-dl {
+      grid-template-columns: 1fr;
+    }
+
+    #{{ sid }} .lh-card,
+    #{{ sid }} .lh-faq {
+      padding: 24px;
+    }
+
+    #{{ sid }} .lh-figure img {
+      height: 420px;
+    }
+
+    #{{ sid }} .lh-stat-divider {
+      display: none;
+    }
+  }
+</style>
+
+<section id="{{ sid }}">
+  <section class="lh-hero">
+    <div class="lh-hero__media">
+      {% if section.settings.hero_bg_image != blank %}
+        <img
+          src="{{ section.settings.hero_bg_image | image_url: width: 2400 }}"
+          alt="{{ section.settings.hero_bg_image.alt | escape }}"
+          loading="eager"
+          width="{{ section.settings.hero_bg_image.width }}"
+          height="{{ section.settings.hero_bg_image.height }}"
+        >
+      {% else %}
+        <img
+          src="https://cdn.shopify.com/s/files/1/0753/4054/6238/files/Bulk_Orders.jpg?v=1775558179"
+          alt="Atmospheric close-up of a sunlit traditional leather workshop with rolls of tanned hide and vintage artisanal tools on a wooden bench"
+          loading="eager"
+        >
+      {% endif %}
+    </div>
+
+    <div class="lh-hero__scrim"></div>
+
+    <div class="lh-hero__content">
+      <span class="lh-eyebrow lh-hero__eyebrow">{{ section.settings.hero_eyebrow }}</span>
+
+      <h1 class="lh-display lh-hero__title">
+        {{ section.settings.hero_title | escape }}<br>
+        {{ section.settings.hero_title_line_2 | escape }}
+        <span>{{ section.settings.hero_highlight | escape }}</span>
+      </h1>
+
+      <p class="lh-hero__text">
+        {{ section.settings.hero_text }}
+      </p>
+
+      <div class="lh-btn-row">
+        <a href="{{ section.settings.hero_primary_url }}" class="lh-btn lh-btn--primary">
+          {{ section.settings.hero_primary_label | escape }}
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+
+        <a href="{{ section.settings.hero_secondary_url }}" class="lh-btn lh-btn--ghost">
+          {{ section.settings.hero_secondary_label | escape }}
+        </a>
+      </div>
+    </div>
+
+    <div class="lh-hero__stats">
+      <div class="lh-wrap">
+        <div class="lh-stats">
+          <div class="lh-stat">
+            <strong class="lh-display">{{ section.settings.stat_1_value }}</strong>
+            <span>{{ section.settings.stat_1_label }}</span>
+          </div>
+
+          <span class="lh-stat-divider"></span>
+
+          <div class="lh-stat">
+            <strong class="lh-display">{{ section.settings.stat_2_value }}</strong>
+            <span>{{ section.settings.stat_2_label }}</span>
+          </div>
+
+          <span class="lh-stat-divider"></span>
+
+          <div class="lh-stat">
+            <strong class="lh-display">{{ section.settings.stat_3_value }}</strong>
+            <span>{{ section.settings.stat_3_label }}</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lh-section lh-surface">
+    <div class="lh-wrap">
+      <div class="lh-header-split">
+        <div>
+          <span class="lh-eyebrow" style="color:#B4703E;">{{ section.settings.core_eyebrow }}</span>
+          <h2 class="lh-display-md lh-section-title">{{ section.settings.core_title }}</h2>
+        </div>
+
+        <p>{{ section.settings.core_text }}</p>
+      </div>
+
+      <div class="lh-competency-grid">
+        <article class="lh-card">
+          <span class="material-symbols-outlined lh-card__icon">apparel</span>
+          <h4 class="lh-display-md lh-card__title">Jackets</h4>
+          <p class="lh-card__text">Outerwear, dresses, jackets, pants and cardigans — stylish and durable.</p>
+        </article>
+
+        <article class="lh-card">
+          <span class="material-symbols-outlined lh-card__icon">shopping_bag</span>
+          <h4 class="lh-display-md lh-card__title">Bags</h4>
+          <p class="lh-card__text">Totes, travel bags, and carrying selections designed for utility and longevity.</p>
+        </article>
+
+        <article class="lh-card">
+          <span class="material-symbols-outlined lh-card__icon">account_balance_wallet</span>
+          <h4 class="lh-display-md lh-card__title">Wallets</h4>
+          <p class="lh-card__text">Slim, functional designs to wear and carry on a daily basis — and bulk-ready.</p>
+        </article>
+
+        <article class="lh-card">
+          <span class="material-symbols-outlined lh-card__icon">straighten</span>
+          <h4 class="lh-display-md lh-card__title">Belts</h4>
+          <p class="lh-card__text">Refined, clean designs that match formal and casual collections.</p>
+        </article>
+
+        <article class="lh-card">
+          <span class="material-symbols-outlined lh-card__icon">footprint</span>
+          <h4 class="lh-display-md lh-card__title">Shoes</h4>
+          <p class="lh-card__text">Footwear that's comfortable enough to wear daily.</p>
+        </article>
+
+        <article class="lh-card">
+          <span class="material-symbols-outlined lh-card__icon">watch_button_press</span>
+          <h4 class="lh-display-md lh-card__title">Accessories</h4>
+          <p class="lh-card__text">Small leather goods for branding, gifting, and retail sets.</p>
+        </article>
+
+        <article class="lh-card">
+          <span class="material-symbols-outlined lh-card__icon">featured_seasonal_and_gifts</span>
+          <h4 class="lh-display-md lh-card__title">Corporate gifts</h4>
+          <p class="lh-card__text">Bespoke debossed corporate sets — planners, desk pads, and gift kits.</p>
+        </article>
+
+        <article class="lh-card lh-card--accent">
+          <p class="lh-display-md lh-card__accent-text">Custom requirements available on request.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="lh-section lh-surface-low">
+    <div class="lh-wrap">
+      <div class="lh-centered-header">
+        <h2 class="lh-display-md lh-section-title">{{ section.settings.edge_title }}</h2>
+        <span class="lh-underline"></span>
+      </div>
+
+      <div class="lh-feature-grid">
+        <div class="lh-feature">
+          <div class="lh-feature__icon-box">
+            <span class="material-symbols-outlined lh-feature__icon">factory</span>
+          </div>
+          <h4 class="lh-display-md lh-feature__title">Factory-direct pricing</h4>
+          <p class="lh-feature__text">Source directly from a trusted leather manufacturer and manage costs efficiently.</p>
+        </div>
+
+        <div class="lh-feature">
+          <div class="lh-feature__icon-box">
+            <span class="material-symbols-outlined lh-feature__icon">verified_user</span>
+          </div>
+          <h4 class="lh-display-md lh-feature__title">Premium Pakistan leather</h4>
+          <p class="lh-feature__text">Superior craftsmanship and a considered choice of materials.</p>
+        </div>
+
+        <div class="lh-feature">
+          <div class="lh-feature__icon-box">
+            <span class="material-symbols-outlined lh-feature__icon">label</span>
+          </div>
+          <h4 class="lh-display-md lh-feature__title">Private label &amp; branding</h4>
+          <p class="lh-feature__text">Personalised branding — embossing, tags, and packaging.</p>
+        </div>
+
+        <div class="lh-feature">
+          <div class="lh-feature__icon-box">
+            <span class="material-symbols-outlined lh-feature__icon">public</span>
+          </div>
+          <h4 class="lh-display-md lh-feature__title">Global shipping</h4>
+          <p class="lh-feature__text">Qualified shipping of corporate bulk orders throughout the globe.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="{{ sid }}-process" class="lh-section lh-ink">
+    <div class="lh-wrap">
+      <div class="lh-centered-header">
+        <span class="lh-eyebrow" style="color:#F4BB92;background:rgba(180,112,62,0.2);padding:6px 12px;">{{ section.settings.process_eyebrow }}</span>
+        <h2 class="lh-display-md lh-section-title lh-section-title--light">{{ section.settings.process_title }}</h2>
+      </div>
+
+      <div class="lh-process">
+        <ol class="lh-process-grid">
+          <li class="lh-step">
+            <span class="lh-display lh-step__num">1</span>
+            <h5 class="lh-display-md lh-step__title">Submit requirements</h5>
+            <p class="lh-step__text">Share product details, quantities, and customisation needs.</p>
+          </li>
+
+          <li class="lh-step">
+            <span class="lh-display lh-step__num">2</span>
+            <h5 class="lh-display-md lh-step__title">Receive proposal</h5>
+            <p class="lh-step__text">We offer pricing, schedules, and matched products.</p>
+          </li>
+
+          <li class="lh-step">
+            <span class="lh-display lh-step__num">3</span>
+            <h5 class="lh-display-md lh-step__title">Approve samples</h5>
+            <p class="lh-step__text">Review for material, finish, and branding.</p>
+          </li>
+
+          <li class="lh-step">
+            <span class="lh-display lh-step__num">4</span>
+            <h5 class="lh-display-md lh-step__title">Production &amp; QC</h5>
+            <p class="lh-step__text">Large-scale production with high quality standards.</p>
+          </li>
+
+          <li class="lh-step">
+            <span class="lh-display lh-step__num">5</span>
+            <h5 class="lh-display-md lh-step__title">Global shipping</h5>
+            <p class="lh-step__text">Safe delivery to your business premises anywhere.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
+  <section class="lh-section lh-surface">
+    <div class="lh-wrap">
+      <div class="lh-split">
+        <figure class="lh-figure">
+          {% if section.settings.capability_image != blank %}
+            <img
+              src="{{ section.settings.capability_image | image_url: width: 1600 }}"
+              alt="{{ section.settings.capability_image.alt | escape }}"
+              loading="lazy"
+              width="{{ section.settings.capability_image.width }}"
+              height="{{ section.settings.capability_image.height }}"
+            >
+          {% else %}
+            <img
+              src="https://cdn.shopify.com/s/files/1/0753/4054/6238/files/Industrial_scale_Botique_quality.jpg?v=1775558185"
+              alt="High-quality close up of artisanal leather cutting process with professional steel blades on a workbench"
+              loading="lazy"
+            >
+          {% endif %}
+        </figure>
+
+        <div class="lh-copy">
+          <span class="lh-eyebrow" style="color:#B4703E;">{{ section.settings.capability_eyebrow }}</span>
+          <h2 class="lh-display-md lh-section-title" style="margin-top:0 !important;">{{ section.settings.capability_title }}</h2>
+          <p>{{ section.settings.capability_text }}</p>
+
+          <dl class="lh-dl">
+            <div>
+              <dt>OEM solutions</dt>
+              <dd>Bring your designs to life with full manufacturing assistance.</dd>
+            </div>
+
+            <div>
+              <dt>Private labelling</dt>
+              <dd>Ready-to-brand products with custom tags and packaging.</dd>
+            </div>
+
+            <div>
+              <dt>Material sourcing</dt>
+              <dd>A large variety of finishes for varied markets.</dd>
+            </div>
+
+            <div>
+              <dt>Technical design</dt>
+              <dd>Structural, lasting, and usability support.</dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lh-section lh-surface">
+    <div class="lh-wrap">
+      <div class="lh-faq-wrap">
+        <div class="lh-centered-header">
+          <span class="lh-eyebrow" style="color:#B4703E;">{{ section.settings.faq_eyebrow }}</span>
+          <h2 class="lh-display-md lh-section-title">{{ section.settings.faq_title }}</h2>
+        </div>
+
+        <div class="lh-faq-list">
+          <details class="lh-faq">
+            <summary class="lh-display-md lh-faq__summary">
+              {{ section.settings.faq_q1 }}
+              <span class="material-symbols-outlined lh-faq__icon">expand_more</span>
+            </summary>
+            <p class="lh-faq__text">{{ section.settings.faq_a1 }}</p>
+          </details>
+
+          <details class="lh-faq">
+            <summary class="lh-display-md lh-faq__summary">
+              {{ section.settings.faq_q2 }}
+              <span class="material-symbols-outlined lh-faq__icon">expand_more</span>
+            </summary>
+            <p class="lh-faq__text">{{ section.settings.faq_a2 }}</p>
+          </details>
+
+          <details class="lh-faq">
+            <summary class="lh-display-md lh-faq__summary">
+              {{ section.settings.faq_q3 }}
+              <span class="material-symbols-outlined lh-faq__icon">expand_more</span>
+            </summary>
+            <p class="lh-faq__text">{{ section.settings.faq_a3 }}</p>
+          </details>
+
+          <details class="lh-faq">
+            <summary class="lh-display-md lh-faq__summary">
+              {{ section.settings.faq_q4 }}
+              <span class="material-symbols-outlined lh-faq__icon">expand_more</span>
+            </summary>
+            <p class="lh-faq__text">{{ section.settings.faq_a4 }}</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="lh-section lh-surface-high lh-cta">
+    <div class="lh-wrap">
+      <div class="lh-cta__inner">
+        <h2 class="lh-display lh-cta__title">{{ section.settings.cta_title }}</h2>
+        <p class="lh-cta__text">{{ section.settings.cta_text }}</p>
+
+        <a
+          href="{{ section.settings.cta_button_url }}"
+          class="lh-btn lh-btn--primary"
+          style="min-height:64px;padding:0 36px;font-size:13px;box-shadow:0 20px 35px rgba(0,0,0,0.12);"
+        >
+          {{ section.settings.cta_button_label }}
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+
+        <ul class="lh-contact-list">
+          {% if section.settings.contact_email != blank %}
+            <li>
+              <a href="mailto:{{ section.settings.contact_email | escape }}">
+                <span class="material-symbols-outlined">mail</span>
+                <span>{{ section.settings.contact_email }}</span>
+              </a>
+            </li>
+          {% endif %}
+
+          {% if section.settings.whatsapp_url != blank and section.settings.whatsapp_label != blank %}
+            <li>
+              <a href="{{ section.settings.whatsapp_url }}" target="_blank" rel="noopener">
+                <span class="material-symbols-outlined">chat</span>
+                <span>{{ section.settings.whatsapp_label }}</span>
+              </a>
+            </li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </section>
+</section>
+
+{% schema %}
+{
+  "name": "Leathery bulk orders",
+  "tag": "section",
+  "class": "section section-leathery-bulk-orders",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_bg_image",
+      "label": "Hero background image"
+    },
+    {
+      "type": "text",
+      "id": "hero_eyebrow",
+      "label": "Hero eyebrow",
+      "default": "Straight from the factory"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero title line 1",
+      "default": "Premium Bulk Leather Products"
+    },
+    {
+      "type": "text",
+      "id": "hero_title_line_2",
+      "label": "Hero title line 2",
+      "default": "for Businesses"
+    },
+    {
+      "type": "text",
+      "id": "hero_highlight",
+      "label": "Hero highlight line",
+      "default": "Reliable and easy ordering."
+    },
+    {
+      "type": "textarea",
+      "id": "hero_text",
+      "label": "Hero text",
+      "default": "Our bulk orders service offers businesses bulk leather products to sell at retail, corporate gifts, and large-scale needs — with consistent quality, reliable availability, and an efficient ordering process."
+    },
+    {
+      "type": "text",
+      "id": "hero_primary_label",
+      "label": "Hero primary button label",
+      "default": "Submit a bulk inquiry"
+    },
+    {
+      "type": "url",
+      "id": "hero_primary_url",
+      "label": "Hero primary button link"
+    },
+    {
+      "type": "text",
+      "id": "hero_secondary_label",
+      "label": "Hero secondary button label",
+      "default": "See the process"
+    },
+    {
+      "type": "text",
+      "id": "hero_secondary_url",
+      "label": "Hero secondary button anchor",
+      "default": "#"
+    },
+    {
+      "type": "text",
+      "id": "stat_1_value",
+      "label": "Stat 1 value",
+      "default": "500+"
+    },
+    {
+      "type": "text",
+      "id": "stat_1_label",
+      "label": "Stat 1 label",
+      "default": "Global clients"
+    },
+    {
+      "type": "text",
+      "id": "stat_2_value",
+      "label": "Stat 2 value",
+      "default": "50+"
+    },
+    {
+      "type": "text",
+      "id": "stat_2_label",
+      "label": "Stat 2 label",
+      "default": "Countries exported"
+    },
+    {
+      "type": "text",
+      "id": "stat_3_value",
+      "label": "Stat 3 value",
+      "default": "Factory direct"
+    },
+    {
+      "type": "text",
+      "id": "stat_3_label",
+      "label": "Stat 3 label",
+      "default": "No middlemen"
+    },
+    {
+      "type": "text",
+      "id": "core_eyebrow",
+      "label": "Core section eyebrow",
+      "default": "Core competencies"
+    },
+    {
+      "type": "text",
+      "id": "core_title",
+      "label": "Core section title",
+      "default": "Precision-manufactured leather goods."
+    },
+    {
+      "type": "textarea",
+      "id": "core_text",
+      "label": "Core section text",
+      "default": "We deal with a full range of wholesale leather goods — with consistency and attention to detail, whether in the close craftsmanship or in mass production."
+    },
+    {
+      "type": "text",
+      "id": "edge_title",
+      "label": "Artisan edge title",
+      "default": "The artisan edge."
+    },
+    {
+      "type": "text",
+      "id": "process_eyebrow",
+      "label": "Process eyebrow",
+      "default": "Path"
+    },
+    {
+      "type": "text",
+      "id": "process_title",
+      "label": "Process title",
+      "default": "From design to delivery."
+    },
+    {
+      "type": "image_picker",
+      "id": "capability_image",
+      "label": "Capability image"
+    },
+    {
+      "type": "text",
+      "id": "capability_eyebrow",
+      "label": "Capability eyebrow",
+      "default": "Capability"
+    },
+    {
+      "type": "text",
+      "id": "capability_title",
+      "label": "Capability title",
+      "default": "Industrial scale, boutique quality."
+    },
+    {
+      "type": "textarea",
+      "id": "capability_text",
+      "label": "Capability text",
+      "default": "We take fine ideas and scale them without losing the refinement. Highly qualified hands, modern machinery, balanced results."
+    },
+    {
+      "type": "text",
+      "id": "faq_eyebrow",
+      "label": "FAQ eyebrow",
+      "default": "Questions"
+    },
+    {
+      "type": "text",
+      "id": "faq_title",
+      "label": "FAQ title",
+      "default": "Frequently asked."
+    },
+    {
+      "type": "text",
+      "id": "faq_q1",
+      "label": "FAQ question 1",
+      "default": "What is your minimum order quantity (MOQ)?"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_a1",
+      "label": "FAQ answer 1",
+      "default": "Bulk pricing normally begins at viable minimums based on the product."
+    },
+    {
+      "type": "text",
+      "id": "faq_q2",
+      "label": "FAQ question 2",
+      "default": "Do you provide samples before bulk production?"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_a2",
+      "label": "FAQ answer 2",
+      "default": "Yes — samples are produced and approved before final production."
+    },
+    {
+      "type": "text",
+      "id": "faq_q3",
+      "label": "FAQ question 3",
+      "default": "What are the lead times for manufacturing?"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_a3",
+      "label": "FAQ answer 3",
+      "default": "Manufacturing schedules vary depending on quantity and customisation."
+    },
+    {
+      "type": "text",
+      "id": "faq_q4",
+      "label": "FAQ question 4",
+      "default": "Can you handle global shipping?"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_a4",
+      "label": "FAQ answer 4",
+      "default": "Yes — we handle international delivery through trusted shipping companies."
+    },
+    {
+      "type": "text",
+      "id": "cta_title",
+      "label": "Final CTA title",
+      "default": "Ready to place a bulk order?"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_text",
+      "label": "Final CTA text",
+      "default": "Place trust in our hands and count on us to deliver — with reliability, quality, and efficient service."
+    },
+    {
+      "type": "text",
+      "id": "cta_button_label",
+      "label": "Final CTA button label",
+      "default": "Submit bulk order inquiry"
+    },
+    {
+      "type": "url",
+      "id": "cta_button_url",
+      "label": "Final CTA button link"
+    },
+    {
+      "type": "text",
+      "id": "contact_email",
+      "label": "Contact email",
+      "default": "[email protected]"
+    },
+    {
+      "type": "url",
+      "id": "whatsapp_url",
+      "label": "WhatsApp URL"
+    },
+    {
+      "type": "text",
+      "id": "whatsapp_label",
+      "label": "WhatsApp label",
+      "default": "WhatsApp · +92 304 1203456"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Leathery bulk orders"
+    }
+  ]
+}
+{% endschema %}

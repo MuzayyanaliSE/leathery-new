@@ -1,0 +1,1491 @@
+{% liquid
+  assign sid = 'lcg-' | append: section.id
+%}
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Phudu:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,300,0,0" rel="stylesheet">
+
+<style>
+  #{{ sid }},
+  #{{ sid }} *,
+  #{{ sid }} *::before,
+  #{{ sid }} *::after {
+    box-sizing: border-box;
+  }
+
+  #{{ sid }} {
+    --brand: #B4703E;
+    --brand-deep: #6F4627;
+    --brand-darker: #4E2F18;
+    --brand-soft: #F4BB92;
+    --brand-tint: #FFE3D1;
+    --surface: #FFF8F5;
+    --surface-low: #FCF1EC;
+    --surface-high: #F1E6E1;
+    --ink: #1F1B18;
+    --ink-2: #51443C;
+    --ink-3: #635D5E;
+    --line: #D5C3B8;
+    --line-soft: rgba(131,116,107,0.18);
+
+    font-family: "Inter", system-ui, sans-serif !important;
+    color: var(--ink) !important;
+    background: var(--surface);
+    width: 100%;
+    max-width: 100%;
+    overflow: hidden;
+    position: relative;
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  #{{ sid }} a,
+  #{{ sid }} a:hover,
+  #{{ sid }} a:focus,
+  #{{ sid }} a:active {
+    text-decoration: none !important;
+  }
+
+  #{{ sid }} img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    border: 0;
+  }
+
+  #{{ sid }} h1,
+  #{{ sid }} h2,
+  #{{ sid }} h3,
+  #{{ sid }} h4,
+  #{{ sid }} h5,
+  #{{ sid }} h6,
+  #{{ sid }} p,
+  #{{ sid }} ul,
+  #{{ sid }} ol,
+  #{{ sid }} li,
+  #{{ sid }} figure,
+  #{{ sid }} dl,
+  #{{ sid }} dt,
+  #{{ sid }} dd {
+    margin: 0;
+    padding: 0;
+  }
+
+  #{{ sid }} .material-symbols-outlined {
+    font-variation-settings:
+      "FILL" 0,
+      "wght" 300,
+      "GRAD" 0,
+      "opsz" 24;
+    vertical-align: middle;
+    line-height: 1;
+  }
+
+  #{{ sid }} .cg-wrap {
+    width: min(100% - 48px, 1280px);
+    margin: 0 auto;
+  }
+
+  #{{ sid }} .cg-display {
+    font-family: "Phudu", Impact, sans-serif !important;
+    font-weight: 800 !important;
+    line-height: 1.02 !important;
+    letter-spacing: -0.02em !important;
+  }
+
+  #{{ sid }} .cg-display-md {
+    font-family: "Phudu", Impact, sans-serif !important;
+    font-weight: 800 !important;
+    line-height: 1.05 !important;
+    letter-spacing: -0.018em !important;
+  }
+
+  #{{ sid }} .cg-eyebrow {
+    display: inline-block;
+    font-family: "Inter", system-ui, sans-serif !important;
+    font-weight: 700 !important;
+    font-size: 11px !important;
+    letter-spacing: 0.32em !important;
+    text-transform: uppercase !important;
+  }
+
+  #{{ sid }} .cg-section {
+    padding: 80px 0;
+  }
+
+  #{{ sid }} .cg-section-lg {
+    padding: 96px 0;
+  }
+
+  #{{ sid }} .cg-texture {
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+    opacity: 0.05;
+  }
+
+  #{{ sid }} .cg-hero {
+    position: relative;
+    min-height: 100svh;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    background: var(--ink);
+    color: var(--surface);
+  }
+
+  #{{ sid }} .cg-hero__media,
+  #{{ sid }} .cg-hero__scrim,
+  #{{ sid }} .cg-hero__texture {
+    position: absolute;
+    inset: 0;
+  }
+
+  #{{ sid }} .cg-hero__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: grayscale(0.25) brightness(0.45);
+  }
+
+  #{{ sid }} .cg-hero__scrim {
+    background:
+      linear-gradient(180deg, rgba(31,27,24,0.30) 0%, rgba(31,27,24,0.55) 70%, rgba(31,27,24,0.85) 100%),
+      radial-gradient(80% 60% at 20% 30%, rgba(180,112,62,0.20) 0%, transparent 70%);
+  }
+
+  #{{ sid }} .cg-hero__content {
+    position: relative;
+    z-index: 2;
+    width: min(100% - 48px, 1280px);
+    margin: 0 auto;
+    padding-top: 112px;
+    padding-bottom: 96px;
+  }
+
+  #{{ sid }} .cg-hero__inner {
+    max-width: 960px;
+    margin: 0 auto;
+    text-align: center;
+  }
+
+  #{{ sid }} .cg-hero__eyebrow {
+    color: var(--brand-soft);
+    background: rgba(180,112,62,0.20);
+    padding: 6px 12px;
+  }
+
+  #{{ sid }} .cg-hero__title {
+    color: var(--surface) !important;
+    font-size: clamp(40px, 6vw, 72px) !important;
+    margin-top: 28px !important;
+  }
+
+  #{{ sid }} .cg-hero__title span {
+    display: block;
+    color: var(--brand-soft);
+    font-weight: 700;
+    font-size: clamp(28px, 4.2vw, 52px);
+    margin-top: 4px;
+    letter-spacing: -0.015em;
+  }
+
+  #{{ sid }} .cg-hero__text {
+    margin: 28px auto 0 !important;
+    max-width: 760px;
+    font-size: clamp(16px, 2vw, 20px);
+    line-height: 1.75;
+    font-weight: 300;
+    color: rgba(255,248,245,0.85);
+  }
+
+  #{{ sid }} .cg-btn-row {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  #{{ sid }} .cg-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    min-height: 56px;
+    padding: 0 28px;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    transition: 0.25s ease;
+    cursor: pointer;
+  }
+
+  #{{ sid }} .cg-btn--primary {
+    background: var(--brand);
+    color: #fff !important;
+  }
+
+  #{{ sid }} .cg-btn--primary:hover {
+    background: var(--brand-deep);
+  }
+
+  #{{ sid }} .cg-btn--ghost {
+    background: transparent;
+    color: var(--surface) !important;
+    border: 1px solid rgba(255,248,245,0.40);
+  }
+
+  #{{ sid }} .cg-btn--ghost:hover {
+    background: var(--surface);
+    color: var(--ink) !important;
+    border-color: var(--surface);
+  }
+
+  #{{ sid }} .cg-trust {
+    position: relative;
+    overflow: hidden;
+    background: var(--ink);
+    padding: 44px 0;
+  }
+
+  #{{ sid }} .cg-trust__grid {
+    position: relative;
+    z-index: 1;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 24px;
+    text-align: center;
+    align-items: center;
+  }
+
+  #{{ sid }} .cg-trust__item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    color: var(--surface);
+  }
+
+#{{ sid }} .cg-trust__item .material-symbols-outlined {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 48px;
+  line-height: 1;
+  color: var(--brand);
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 500,
+    "GRAD" 0,
+    "opsz" 48;
+}
+
+  #{{ sid }} .cg-trust__item span:last-child {
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.01em;
+  }
+
+  #{{ sid }} .cg-centered {
+    text-align: center;
+  }
+
+  #{{ sid }} .cg-centered p {
+    max-width: 900px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  #{{ sid }} .cg-title {
+    font-size: clamp(32px, 4.4vw, 52px) !important;
+    color: var(--ink) !important;
+    margin-top: 12px !important;
+  }
+
+  #{{ sid }} .cg-title-light {
+    color: var(--surface) !important;
+  }
+
+  #{{ sid }} .cg-lead {
+    font-size: 16px;
+    line-height: 1.85;
+    color: var(--ink-2);
+    font-weight: 300;
+  }
+
+  #{{ sid }} .cg-stack {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  #{{ sid }} .cg-showcase-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    gap: 24px;
+    margin-bottom: 56px;
+  }
+
+  #{{ sid }} .cg-showcase-head p {
+    max-width: 380px;
+    font-size: 15px;
+    line-height: 1.8;
+    color: var(--ink-3);
+    font-weight: 300;
+  }
+
+  #{{ sid }} .cg-product-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 1px;
+    background: rgba(213,195,184,0.30);
+    border: 1px solid rgba(213,195,184,0.30);
+  }
+
+  #{{ sid }} .cg-product-card {
+    background: var(--surface);
+    overflow: hidden;
+    transition: background 0.25s ease;
+  }
+
+  #{{ sid }} .cg-product-card:hover {
+    background: var(--surface-low);
+  }
+
+  #{{ sid }} .cg-product-card__image {
+    aspect-ratio: 4 / 5;
+    overflow: hidden;
+  }
+
+  #{{ sid }} .cg-product-card__image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.7s ease;
+  }
+
+  #{{ sid }} .cg-product-card:hover .cg-product-card__image img {
+    transform: scale(1.05);
+  }
+
+  #{{ sid }} .cg-product-card__body {
+    padding: 24px 28px 28px;
+    text-align: center;
+  }
+
+  #{{ sid }} .cg-product-card__title {
+    font-size: 20px !important;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: var(--ink) !important;
+  }
+
+  #{{ sid }} .cg-dark {
+    position: relative;
+    overflow: hidden;
+    background: var(--ink);
+    color: var(--surface);
+  }
+
+  #{{ sid }} .cg-dark-head {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  #{{ sid }} .cg-dark-head p {
+    margin-top: 20px !important;
+    max-width: 760px;
+    margin-left: auto;
+    margin-right: auto;
+    color: rgba(255,248,245,0.70);
+    font-size: 16px;
+    line-height: 1.8;
+    font-weight: 300;
+  }
+
+  #{{ sid }} .cg-industry-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0,1fr));
+    gap: 1px;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.05);
+  }
+
+  #{{ sid }} .cg-industry {
+    padding: 28px 18px;
+    background: var(--ink);
+    text-align: center;
+    transition: background 0.25s ease;
+  }
+
+  #{{ sid }} .cg-industry:hover {
+    background: rgba(78,47,24,0.40);
+  }
+
+#{{ sid }} .cg-industry .material-symbols-outlined {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  line-height: 1;
+  color: var(--brand);
+  margin-bottom: 14px;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 500,
+    "GRAD" 0,
+    "opsz" 48;
+}
+  #{{ sid }} .cg-industry p {
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--surface);
+  }
+
+  #{{ sid }} .cg-split {
+    display: grid;
+    grid-template-columns: minmax(0,1fr) minmax(0,1fr);
+    gap: 64px 80px;
+    align-items: center;
+  }
+
+  #{{ sid }} .cg-figure {
+    position: relative;
+    margin: 0;
+  }
+
+  #{{ sid }} .cg-figure img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+  }
+
+  #{{ sid }} .cg-figure::after {
+    content: "";
+    position: absolute;
+    width: 240px;
+    height: 240px;
+    right: -32px;
+    bottom: -32px;
+    border: 12px solid rgba(180,112,62,0.20);
+    z-index: -1;
+  }
+
+  #{{ sid }} .cg-copy {
+    text-align: left;
+  }
+
+  #{{ sid }} .cg-copy-intro {
+    font-size: 18px;
+    line-height: 1.8;
+    color: var(--ink-2);
+    font-weight: 300;
+    max-width: 520px;
+    margin-top: 18px !important;
+  }
+
+  #{{ sid }} .cg-feature-list {
+    display: flex;
+    flex-direction: column;
+    gap: 28px;
+    margin: 40px 0;
+  }
+
+  #{{ sid }} .cg-feature-row {
+    display: flex;
+    gap: 24px;
+    align-items: flex-start;
+  }
+
+#{{ sid }} .cg-feature-row .material-symbols-outlined {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 44px;
+  line-height: 1;
+  color: var(--brand);
+  flex-shrink: 0;
+  margin-top: 2px;
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 500,
+    "GRAD" 0,
+    "opsz" 48;
+}
+
+  #{{ sid }} .cg-feature-row h3 {
+    font-size: 20px !important;
+    text-transform: uppercase;
+    letter-spacing: -0.01em;
+    color: var(--ink) !important;
+    margin-bottom: 8px !important;
+  }
+
+  #{{ sid }} .cg-feature-row p {
+    font-size: 14px;
+    line-height: 1.65;
+    color: var(--ink-2);
+  }
+
+  #{{ sid }} .cg-note {
+    font-size: 14px;
+    line-height: 1.7;
+    color: var(--ink-3);
+    font-style: italic;
+    max-width: 520px;
+  }
+
+  #{{ sid }} .cg-center-header {
+    text-align: center;
+    margin-bottom: 56px;
+  }
+
+  #{{ sid }} .cg-center-header .cg-underline {
+    width: 64px;
+    height: 3px;
+    background: var(--brand);
+    margin: 20px auto 0;
+  }
+
+  #{{ sid }} .cg-why-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 32px;
+  }
+
+  #{{ sid }} .cg-why {
+    text-align: center;
+  }
+
+ #{{ sid }} .cg-why__icon {
+  width: 96px;
+  height: 96px;
+  background: #fff;
+  border: 1px solid rgba(180,112,62,0.20);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+}
+
+#{{ sid }} .cg-why__icon .material-symbols-outlined {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 46px;
+  line-height: 1;
+  color: var(--brand);
+  font-variation-settings:
+    "FILL" 0,
+    "wght" 500,
+    "GRAD" 0,
+    "opsz" 48;
+}
+
+  #{{ sid }} .cg-why h3 {
+    font-size: 19px !important;
+    color: var(--ink) !important;
+    margin-bottom: 8px !important;
+  }
+
+  #{{ sid }} .cg-why p {
+    max-width: 260px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 1.6;
+    color: var(--ink-2);
+  }
+
+  #{{ sid }} .cg-process-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0,1fr));
+    gap: 32px;
+    list-style: none;
+  }
+
+  #{{ sid }} .cg-step__num {
+    width: 72px;
+    height: 72px;
+    border-radius: 999px;
+    background: var(--brand);
+    color: #fff;
+    border: 4px solid var(--ink);
+    box-shadow: 0 0 0 1px rgba(244,187,146,0.20);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+  }
+
+  #{{ sid }} .cg-step h3 {
+    font-size: 18px !important;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--surface) !important;
+    margin-bottom: 8px !important;
+  }
+
+  #{{ sid }} .cg-step p {
+    font-size: 13px;
+    line-height: 1.55;
+    color: rgba(255,248,245,0.70);
+  }
+
+  #{{ sid }} .cg-faq-wrap {
+    max-width: 820px;
+    margin: 0 auto;
+  }
+
+  #{{ sid }} .cg-faq-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  #{{ sid }} details > summary {
+    list-style: none;
+  }
+
+  #{{ sid }} details > summary::-webkit-details-marker {
+    display: none;
+  }
+
+  #{{ sid }} .cg-faq {
+    background: #fff;
+    border: 1px solid var(--line-soft);
+    padding: 24px;
+    transition: border-color 0.25s ease;
+  }
+
+  #{{ sid }} .cg-faq[open] {
+    border-color: rgba(180,112,62,0.45);
+  }
+
+  #{{ sid }} .cg-faq__summary {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    cursor: pointer;
+    font-size: 19px !important;
+    color: var(--ink) !important;
+  }
+
+  #{{ sid }} .cg-faq__icon {
+    color: var(--brand);
+    transition: transform 0.22s cubic-bezier(.2,.8,.2,1);
+    flex-shrink: 0;
+  }
+
+  #{{ sid }} .cg-faq[open] .cg-faq__icon {
+    transform: rotate(180deg);
+  }
+
+  #{{ sid }} .cg-faq__text {
+    margin-top: 14px !important;
+    font-size: 16px;
+    line-height: 1.8;
+    color: var(--ink-3);
+    max-width: 680px;
+  }
+
+  #{{ sid }} .cg-cta {
+    position: relative;
+    overflow: hidden;
+    background: var(--surface-high);
+  }
+
+  #{{ sid }} .cg-cta::before {
+    content: "";
+    position: absolute;
+    right: -10%;
+    top: 0;
+    width: 50%;
+    height: 100%;
+    background: rgba(180,112,62,0.08);
+    transform: skewX(-12deg);
+  }
+
+  #{{ sid }} .cg-cta__inner {
+    position: relative;
+    z-index: 1;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 24px;
+  }
+
+  #{{ sid }} .cg-cta__title {
+    font-size: clamp(40px, 5.6vw, 80px) !important;
+    color: var(--ink) !important;
+    max-width: 900px;
+  }
+
+  #{{ sid }} .cg-cta__text {
+    max-width: 760px;
+    font-size: clamp(18px, 2vw, 22px);
+    line-height: 1.75;
+    color: var(--ink-2);
+    font-weight: 300;
+  }
+
+  #{{ sid }} .cg-socials {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 24px 32px;
+    margin-top: 8px;
+  }
+
+  #{{ sid }} .cg-socials a {
+    font-size: 15px;
+    font-weight: 500;
+    color: var(--ink-3) !important;
+    transition: color 0.25s ease;
+  }
+
+  #{{ sid }} .cg-socials a:hover {
+    color: var(--brand) !important;
+  }
+
+  @media (max-width: 1199px) {
+    #{{ sid }} .cg-product-grid,
+    #{{ sid }} .cg-why-grid {
+      grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+
+    #{{ sid }} .cg-industry-grid {
+      grid-template-columns: repeat(3, minmax(0,1fr));
+    }
+
+    #{{ sid }} .cg-split {
+      grid-template-columns: 1fr;
+      gap: 56px;
+    }
+
+    #{{ sid }} .cg-figure::after {
+      display: none;
+    }
+
+    #{{ sid }} .cg-process-grid {
+      grid-template-columns: repeat(2, minmax(0,1fr));
+    }
+  }
+
+  @media (max-width: 767px) {
+    #{{ sid }} .cg-wrap,
+    #{{ sid }} .cg-hero__content {
+      width: min(100% - 32px, 1280px);
+    }
+
+    #{{ sid }} .cg-section,
+    #{{ sid }} .cg-section-lg {
+      padding: 72px 0;
+    }
+
+    #{{ sid }} .cg-hero {
+      min-height: 760px;
+    }
+
+    #{{ sid }} .cg-hero__content {
+      padding-top: 96px;
+      padding-bottom: 72px;
+    }
+
+    #{{ sid }} .cg-btn-row {
+      flex-direction: column;
+    }
+
+    #{{ sid }} .cg-btn {
+      width: 100%;
+    }
+
+    #{{ sid }} .cg-trust__grid,
+    #{{ sid }} .cg-product-grid,
+    #{{ sid }} .cg-industry-grid,
+    #{{ sid }} .cg-why-grid,
+    #{{ sid }} .cg-process-grid {
+      grid-template-columns: 1fr;
+    }
+
+    #{{ sid }} .cg-showcase-head {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 40px;
+    }
+
+    #{{ sid }} .cg-figure img {
+      height: 420px;
+    }
+
+    #{{ sid }} .cg-feature-row {
+      flex-direction: column;
+      gap: 14px;
+      text-align: center;
+    }
+
+    #{{ sid }} .cg-copy,
+    #{{ sid }} .cg-copy-intro,
+    #{{ sid }} .cg-note {
+      text-align: center;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+</style>
+
+<section id="{{ sid }}">
+  <header class="cg-hero">
+    <div class="cg-hero__media">
+      {% if section.settings.hero_bg_image != blank %}
+        <img
+          src="{{ section.settings.hero_bg_image | image_url: width: 2400 }}"
+          alt="{{ section.settings.hero_bg_image.alt | escape }}"
+          loading="eager"
+          width="{{ section.settings.hero_bg_image.width }}"
+          height="{{ section.settings.hero_bg_image.height }}"
+        >
+      {% else %}
+        <img
+          src="https://cdn.shopify.com/s/files/1/0753/4054/6238/files/corporate_gifts.jpg?v=1775558397"
+          alt="Close-up of premium dark brown full-grain leather texture for Leathery corporate gifting"
+          loading="eager"
+        >
+      {% endif %}
+    </div>
+
+    <div class="cg-hero__scrim"></div>
+    <div class="cg-hero__texture cg-texture"></div>
+
+    <div class="cg-hero__content">
+      <div class="cg-hero__inner">
+        <span class="cg-eyebrow cg-hero__eyebrow">{{ section.settings.hero_eyebrow }}</span>
+
+        <h1 class="cg-display cg-hero__title">
+          {{ section.settings.hero_title }}
+          <span>{{ section.settings.hero_highlight }}</span>
+        </h1>
+
+        <p class="cg-hero__text">{{ section.settings.hero_text }}</p>
+
+        <div class="cg-btn-row">
+          <a href="{{ section.settings.hero_primary_url }}" class="cg-btn cg-btn--primary">
+            {{ section.settings.hero_primary_label }}
+            <span class="material-symbols-outlined">arrow_forward</span>
+          </a>
+
+          <a href="{{ section.settings.hero_secondary_url }}" class="cg-btn cg-btn--ghost">
+            {{ section.settings.hero_secondary_label }}
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="cg-trust">
+    <div class="cg-texture" style="position:absolute;inset:0;"></div>
+    <div class="cg-wrap">
+      <div class="cg-trust__grid">
+        <div class="cg-trust__item">
+          <span class="material-symbols-outlined">verified</span>
+          <span>Genuine Leather</span>
+        </div>
+        <div class="cg-trust__item">
+          <span class="material-symbols-outlined">branding_watermark</span>
+          <span>Custom Logo Embossing</span>
+        </div>
+        <div class="cg-trust__item">
+          <span class="material-symbols-outlined">local_shipping</span>
+          <span>Nationwide Delivery</span>
+        </div>
+        <div class="cg-trust__item">
+          <span class="material-symbols-outlined">account_balance_wallet</span>
+          <span>Bulk Pricing</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cg-section cg-centered">
+    <div class="cg-wrap">
+      <span class="cg-eyebrow" style="color:#B4703E;">{{ section.settings.intro_eyebrow }}</span>
+      <h2 class="cg-display-md cg-title">{{ section.settings.intro_title }}</h2>
+
+      <div class="cg-stack" style="margin-top:32px;">
+        <p class="cg-lead">{{ section.settings.intro_text_1 }}</p>
+        <p class="cg-lead">{{ section.settings.intro_text_2 }}</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="cg-section-lg" style="background:var(--surface-low);">
+    <div class="cg-wrap">
+      <div class="cg-showcase-head">
+        <div>
+          <span class="cg-eyebrow" style="color:#B4703E;">{{ section.settings.showcase_eyebrow }}</span>
+          <h2 class="cg-display-md cg-title">{{ section.settings.showcase_title }}</h2>
+        </div>
+        <p>{{ section.settings.showcase_text }}</p>
+      </div>
+
+      <div class="cg-product-grid">
+        <article class="cg-product-card">
+          <div class="cg-product-card__image">
+            <img src="https://cdn.shopify.com/s/files/1/0753/4054/6238/files/wallets_n_card_holders.jpg?v=1775558487" alt="Handcrafted leather wallets and slim card holders for corporate gifting" loading="lazy" width="600" height="750">
+          </div>
+          <div class="cg-product-card__body">
+            <h3 class="cg-display-md cg-product-card__title">Wallets &amp; Card Holders</h3>
+          </div>
+        </article>
+
+        <article class="cg-product-card">
+          <div class="cg-product-card__image">
+            <img src="https://cdn.shopify.com/s/files/1/0753/4054/6238/files/Bags_n_portfolio.jpg?v=1775558542" alt="Premium leather bags and executive portfolios for business gifting" loading="lazy" width="600" height="750">
+          </div>
+          <div class="cg-product-card__body">
+            <h3 class="cg-display-md cg-product-card__title">Bags &amp; Portfolios</h3>
+          </div>
+        </article>
+
+        <article class="cg-product-card">
+          <div class="cg-product-card__image">
+            <img src="https://cdn.shopify.com/s/files/1/0753/4054/6238/files/Journals_and_Notebooks.jpg?v=1775558590" alt="Leather journals and executive notebooks for branded corporate gifting" loading="lazy" width="600" height="750">
+          </div>
+          <div class="cg-product-card__body">
+            <h3 class="cg-display-md cg-product-card__title">Journals &amp; Notebooks</h3>
+          </div>
+        </article>
+
+        <article class="cg-product-card">
+          <div class="cg-product-card__image">
+            <img src="https://cdn.shopify.com/s/files/1/0753/4054/6238/files/Executive_gifts_set.jpg?v=1775558600" alt="Luxury leather executive gift set for premium corporate gifting in Pakistan" loading="lazy" width="600" height="750">
+          </div>
+          <div class="cg-product-card__body">
+            <h3 class="cg-display-md cg-product-card__title">Executive Gift Sets</h3>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="cg-section-lg cg-dark">
+    <div class="cg-texture" style="position:absolute;inset:0;"></div>
+    <div class="cg-wrap" style="position:relative;z-index:1;">
+      <div class="cg-dark-head">
+        <span class="cg-eyebrow" style="color:#F4BB92;background:rgba(180,112,62,0.20);padding:6px 12px;">{{ section.settings.industries_eyebrow }}</span>
+        <h2 class="cg-display-md cg-title cg-title-light" style="margin-top:16px !important;">{{ section.settings.industries_title }}</h2>
+        <p>{{ section.settings.industries_text }}</p>
+      </div>
+
+      <div class="cg-industry-grid">
+        <div class="cg-industry"><span class="material-symbols-outlined">account_balance</span><p>Banking &amp; Finance</p></div>
+        <div class="cg-industry"><span class="material-symbols-outlined">devices</span><p>IT &amp; Tech</p></div>
+        <div class="cg-industry"><span class="material-symbols-outlined">account_balance_wallet</span><p>Gov &amp; Embassies</p></div>
+        <div class="cg-industry"><span class="material-symbols-outlined">domain</span><p>Real Estate</p></div>
+        <div class="cg-industry"><span class="material-symbols-outlined">medical_services</span><p>Healthcare</p></div>
+        <div class="cg-industry"><span class="material-symbols-outlined">shopping_cart</span><p>FMCG &amp; Retail</p></div>
+        <div class="cg-industry"><span class="material-symbols-outlined">school</span><p>Education</p></div>
+        <div class="cg-industry"><span class="material-symbols-outlined">podcasts</span><p>Telecom &amp; Media</p></div>
+        <div class="cg-industry"><span class="material-symbols-outlined">hotel</span><p>Hospitality</p></div>
+        <div class="cg-industry"><span class="material-symbols-outlined">factory</span><p>Manufacturing</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cg-section-lg">
+    <div class="cg-wrap">
+      <div class="cg-split">
+        <figure class="cg-figure">
+          {% if section.settings.customization_image != blank %}
+            <img
+              src="{{ section.settings.customization_image | image_url: width: 1600 }}"
+              alt="{{ section.settings.customization_image.alt | escape }}"
+              loading="lazy"
+              width="{{ section.settings.customization_image.width }}"
+              height="{{ section.settings.customization_image.height }}"
+            >
+          {% else %}
+            <img
+              src="https://cdn.shopify.com/s/files/1/0753/4054/6238/files/your_brand_our_craft.jpg?v=1775558678"
+              alt="Logo embossing on premium pebble-grain leather for custom corporate gifts"
+              loading="lazy"
+            >
+          {% endif %}
+        </figure>
+
+        <div class="cg-copy">
+          <span class="cg-eyebrow" style="color:#B4703E;">{{ section.settings.customization_eyebrow }}</span>
+          <h2 class="cg-display-md cg-title">{{ section.settings.customization_title }}</h2>
+          <p class="cg-copy-intro">{{ section.settings.customization_intro }}</p>
+
+          <div class="cg-feature-list">
+            <div class="cg-feature-row">
+              <span class="material-symbols-outlined">ink_highlighter</span>
+              <div>
+                <h3 class="cg-display-md">Blind Embossing</h3>
+                <p>Minimalist logos work to a clean, understated, high-end finish.</p>
+              </div>
+            </div>
+
+            <div class="cg-feature-row">
+              <span class="material-symbols-outlined">auto_awesome</span>
+              <div>
+                <h3 class="cg-display-md">Gold &amp; Silver Foiling</h3>
+                <p>Metallic branding that gives a luxurious and sophisticated touch.</p>
+              </div>
+            </div>
+
+            <div class="cg-feature-row">
+              <span class="material-symbols-outlined">style</span>
+              <div>
+                <h3 class="cg-display-md">Bespoke Tags &amp; Packaging</h3>
+                <p>Custom sleeves, boxes, and inserts for a complete gifting experience.</p>
+              </div>
+            </div>
+          </div>
+
+          <p class="cg-note">{{ section.settings.customization_note }}</p>
+
+          <div style="margin-top:40px;">
+            <a href="{{ section.settings.customization_button_url }}" class="cg-btn cg-btn--primary">
+              {{ section.settings.customization_button_label }}
+              <span class="material-symbols-outlined">send</span>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cg-section-lg" style="background:var(--surface-low);">
+    <div class="cg-wrap">
+      <div class="cg-center-header">
+        <h2 class="cg-display-md cg-title">{{ section.settings.why_title }}</h2>
+        <span class="cg-underline"></span>
+      </div>
+
+      <div class="cg-why-grid">
+        <div class="cg-why">
+          <div class="cg-why__icon"><span class="material-symbols-outlined">inventory_2</span></div>
+          <h3 class="cg-display-md">Genuine Materials</h3>
+          <p>Leather chosen carefully with a polished appearance and durable feel.</p>
+        </div>
+        <div class="cg-why">
+          <div class="cg-why__icon"><span class="material-symbols-outlined">handyman</span></div>
+          <h3 class="cg-display-md">Handcrafted Quality</h3>
+          <p>Neatly finished pieces with close attention to stitching and detail.</p>
+        </div>
+        <div class="cg-why">
+          <div class="cg-why__icon"><span class="material-symbols-outlined">public</span></div>
+          <h3 class="cg-display-md">All Pakistan Delivery</h3>
+          <p>Reliable dispatch for businesses in major cities and across the country.</p>
+        </div>
+        <div class="cg-why">
+          <div class="cg-why__icon"><span class="material-symbols-outlined">sell</span></div>
+          <h3 class="cg-display-md">Bulk Pricing</h3>
+          <p>Practical pricing for employee packages, gift packages, events, and seasonal orders.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cg-section-lg cg-dark">
+    <div class="cg-wrap">
+      <div class="cg-dark-head" style="margin-bottom:64px;">
+        <span class="cg-eyebrow" style="color:#F4BB92;background:rgba(180,112,62,0.20);padding:6px 12px;">{{ section.settings.process_eyebrow }}</span>
+        <h2 class="cg-display-md cg-title cg-title-light" style="margin-top:16px !important;">{{ section.settings.process_title }}</h2>
+      </div>
+
+      <ol class="cg-process-grid">
+        <li class="cg-step">
+          <span class="cg-display cg-step__num">1</span>
+          <h3 class="cg-display-md">Inquiry</h3>
+          <p>Provide your product requirements, quantity, branding, and delivery specifications.</p>
+        </li>
+        <li class="cg-step">
+          <span class="cg-display cg-step__num">2</span>
+          <h3 class="cg-display-md">Curation</h3>
+          <p>We suggest suitable gift options based on your budget and purpose.</p>
+        </li>
+        <li class="cg-step">
+          <span class="cg-display cg-step__num">3</span>
+          <h3 class="cg-display-md">Sampling</h3>
+          <p>Review sample branding, finish, and packaging before production.</p>
+        </li>
+        <li class="cg-step">
+          <span class="cg-display cg-step__num">4</span>
+          <h3 class="cg-display-md">Delivery</h3>
+          <p>We pack, prepare, and deliver your branded order across Pakistan.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="cg-section">
+    <div class="cg-wrap">
+      <div class="cg-faq-wrap">
+        <div class="cg-center-header">
+          <span class="cg-eyebrow" style="color:#B4703E;">{{ section.settings.faq_eyebrow }}</span>
+          <h2 class="cg-display-md cg-title">{{ section.settings.faq_title }}</h2>
+        </div>
+
+        <div class="cg-faq-list">
+          <details class="cg-faq" open>
+            <summary class="cg-display-md cg-faq__summary">
+              {{ section.settings.faq_q1 }}
+              <span class="material-symbols-outlined cg-faq__icon">expand_more</span>
+            </summary>
+            <p class="cg-faq__text">{{ section.settings.faq_a1 }}</p>
+          </details>
+
+          <details class="cg-faq">
+            <summary class="cg-display-md cg-faq__summary">
+              {{ section.settings.faq_q2 }}
+              <span class="material-symbols-outlined cg-faq__icon">expand_more</span>
+            </summary>
+            <p class="cg-faq__text">{{ section.settings.faq_a2 }}</p>
+          </details>
+
+          <details class="cg-faq">
+            <summary class="cg-display-md cg-faq__summary">
+              {{ section.settings.faq_q3 }}
+              <span class="material-symbols-outlined cg-faq__icon">expand_more</span>
+            </summary>
+            <p class="cg-faq__text">{{ section.settings.faq_a3 }}</p>
+          </details>
+
+          <details class="cg-faq">
+            <summary class="cg-display-md cg-faq__summary">
+              {{ section.settings.faq_q4 }}
+              <span class="material-symbols-outlined cg-faq__icon">expand_more</span>
+            </summary>
+            <p class="cg-faq__text">{{ section.settings.faq_a4 }}</p>
+          </details>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cg-section-lg cg-cta">
+    <div class="cg-wrap">
+      <div class="cg-cta__inner">
+        <h2 class="cg-display cg-cta__title">{{ section.settings.cta_title }}</h2>
+        <p class="cg-cta__text">{{ section.settings.cta_text }}</p>
+
+        <a href="{{ section.settings.cta_button_url }}" class="cg-btn cg-btn--primary" style="min-height:64px;padding:0 36px;font-size:13px;box-shadow:0 20px 35px rgba(0,0,0,0.12);">
+          {{ section.settings.cta_button_label }}
+          <span class="material-symbols-outlined">arrow_forward</span>
+        </a>
+
+        <ul class="cg-socials">
+          {% if section.settings.tiktok_url != blank %}
+            <li><a href="{{ section.settings.tiktok_url }}" target="_blank" rel="noopener">TikTok</a></li>
+          {% endif %}
+          {% if section.settings.pinterest_url != blank %}
+            <li><a href="{{ section.settings.pinterest_url }}" target="_blank" rel="noopener">Pinterest</a></li>
+          {% endif %}
+          {% if section.settings.instagram_url != blank %}
+            <li><a href="{{ section.settings.instagram_url }}" target="_blank" rel="noopener">Instagram</a></li>
+          {% endif %}
+          {% if section.settings.facebook_url != blank %}
+            <li><a href="{{ section.settings.facebook_url }}" target="_blank" rel="noopener">Facebook</a></li>
+          {% endif %}
+        </ul>
+      </div>
+    </div>
+  </section>
+</section>
+
+{% schema %}
+{
+   "name": "Corporate gifting",
+  "tag": "section",
+  "class": "section section-leathery-corporate-gifting",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "hero_bg_image",
+      "label": "Hero background image"
+    },
+    {
+      "type": "text",
+      "id": "hero_eyebrow",
+      "label": "Hero eyebrow",
+      "default": "Smart corporate gifting for executives"
+    },
+    {
+      "type": "text",
+      "id": "hero_title",
+      "label": "Hero title",
+      "default": "Premium Leather Corporate Gifting"
+    },
+    {
+      "type": "text",
+      "id": "hero_highlight",
+      "label": "Hero highlight",
+      "default": "Across Pakistan."
+    },
+    {
+      "type": "textarea",
+      "id": "hero_text",
+      "label": "Hero text",
+      "default": "Premium corporate gifting solutions designed with care, for client appreciation, employee welcome kits, executive gifting, and corporate events."
+    },
+    {
+      "type": "text",
+      "id": "hero_primary_label",
+      "label": "Hero primary button label",
+      "default": "Start your corporate order"
+    },
+    {
+      "type": "url",
+      "id": "hero_primary_url",
+      "label": "Hero primary button URL"
+    },
+    {
+      "type": "text",
+      "id": "hero_secondary_label",
+      "label": "Hero secondary button label",
+      "default": "View catalogue"
+    },
+    {
+      "type": "url",
+      "id": "hero_secondary_url",
+      "label": "Hero secondary button URL"
+    },
+    {
+      "type": "text",
+      "id": "intro_eyebrow",
+      "label": "Intro eyebrow",
+      "default": "Why Leathery"
+    },
+    {
+      "type": "text",
+      "id": "intro_title",
+      "label": "Intro title",
+      "default": "Corporate Leather Gifts for Modern Businesses in Pakistan."
+    },
+    {
+      "type": "textarea",
+      "id": "intro_text_1",
+      "label": "Intro paragraph 1",
+      "default": "Leathery assists brands in producing sophisticated corporate gifting experiences with quality leather products customized to fit professionals. Whether they are wallets, card holders, portfolios, bags, or a curated gift set, each product is crafted to combine utility with an elegant style."
+    },
+    {
+      "type": "textarea",
+      "id": "intro_text_2",
+      "label": "Intro paragraph 2",
+      "default": "No matter what you are planning to do with onboarding kits, appreciation campaigns, or event giveaways, our business gift solutions are designed to build stronger relationships and solidify your brand name."
+    },
+    {
+      "type": "text",
+      "id": "showcase_eyebrow",
+      "label": "Showcase eyebrow",
+      "default": "Curated for impact"
+    },
+    {
+      "type": "text",
+      "id": "showcase_title",
+      "label": "Showcase title",
+      "default": "Leather Corporate Gifts Built for Impact."
+    },
+    {
+      "type": "textarea",
+      "id": "showcase_text",
+      "label": "Showcase text",
+      "default": "Our corporate gifting ideas are a blend of durability, simple design, and ready-to-be-gifted by the brand."
+    },
+    {
+      "type": "text",
+      "id": "industries_eyebrow",
+      "label": "Industries eyebrow",
+      "default": "Sectors served"
+    },
+    {
+      "type": "text",
+      "id": "industries_title",
+      "label": "Industries title",
+      "default": "Corporate Leather Gifts for Every Sector."
+    },
+    {
+      "type": "textarea",
+      "id": "industries_text",
+      "label": "Industries text",
+      "default": "Our corporate gifting range is trusted by businesses across industries — from finance and technology to hospitality and retail. Each sector has unique gifting needs, and our company gift items are designed to adapt seamlessly."
+    },
+    {
+      "type": "image_picker",
+      "id": "customization_image",
+      "label": "Customization image"
+    },
+    {
+      "type": "text",
+      "id": "customization_eyebrow",
+      "label": "Customization eyebrow",
+      "default": "Customization"
+    },
+    {
+      "type": "text",
+      "id": "customization_title",
+      "label": "Customization title",
+      "default": "Your Brand, Our Craft."
+    },
+    {
+      "type": "textarea",
+      "id": "customization_intro",
+      "label": "Customization intro",
+      "default": "Turn everyday products into powerful brand assets with our customization options."
+    },
+    {
+      "type": "textarea",
+      "id": "customization_note",
+      "label": "Customization note",
+      "default": "Our executive gifts and premium corporate presents are not only for gifting, but to be remembered."
+    },
+    {
+      "type": "text",
+      "id": "customization_button_label",
+      "label": "Customization button label",
+      "default": "Discuss your branding"
+    },
+    {
+      "type": "url",
+      "id": "customization_button_url",
+      "label": "Customization button URL"
+    },
+    {
+      "type": "text",
+      "id": "why_title",
+      "label": "Why us title",
+      "default": "Why Businesses Choose Leathery."
+    },
+    {
+      "type": "text",
+      "id": "process_eyebrow",
+      "label": "Process eyebrow",
+      "default": "Path"
+    },
+    {
+      "type": "text",
+      "id": "process_title",
+      "label": "Process title",
+      "default": "Your Corporate Gifting Journey."
+    },
+    {
+      "type": "text",
+      "id": "faq_eyebrow",
+      "label": "FAQ eyebrow",
+      "default": "Questions"
+    },
+    {
+      "type": "text",
+      "id": "faq_title",
+      "label": "FAQ title",
+      "default": "Corporate Gifting Questions."
+    },
+    {
+      "type": "text",
+      "id": "faq_q1",
+      "label": "FAQ question 1",
+      "default": "What is the minimum order quantity?"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_a1",
+      "label": "FAQ answer 1",
+      "default": "Our bulk purchases tend to begin at 25 items per SKU, but can differ based on the product and customization."
+    },
+    {
+      "type": "text",
+      "id": "faq_q2",
+      "label": "FAQ question 2",
+      "default": "What is the time required for custom branding?"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_a2",
+      "label": "FAQ answer 2",
+      "default": "Timelines on branding are dependent on product and quantity of order. We have a definite estimate based on your needs."
+    },
+    {
+      "type": "text",
+      "id": "faq_q3",
+      "label": "FAQ question 3",
+      "default": "Can you handle individual shipping?"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_a3",
+      "label": "FAQ answer 3",
+      "default": "Yes — we are able to facilitate individual shipping for corporate gifting campaigns."
+    },
+    {
+      "type": "text",
+      "id": "faq_q4",
+      "label": "FAQ question 4",
+      "default": "Do you offer custom packaging?"
+    },
+    {
+      "type": "textarea",
+      "id": "faq_a4",
+      "label": "FAQ answer 4",
+      "default": "Yes — we have custom packaging available to finish your gifting package."
+    },
+    {
+      "type": "text",
+      "id": "cta_title",
+      "label": "CTA title",
+      "default": "Ready to Order Your Corporate Gifts?"
+    },
+    {
+      "type": "textarea",
+      "id": "cta_text",
+      "label": "CTA text",
+      "default": "Request custom price quotations on branded leather wallets, company gift packages, employee welcome packages, customer reward initiatives and large business orders."
+    },
+    {
+      "type": "text",
+      "id": "cta_button_label",
+      "label": "CTA button label",
+      "default": "Request a custom quote"
+    },
+    {
+      "type": "url",
+      "id": "cta_button_url",
+      "label": "CTA button URL"
+    },
+    {
+      "type": "url",
+      "id": "tiktok_url",
+      "label": "TikTok URL"
+    },
+    {
+      "type": "url",
+      "id": "pinterest_url",
+      "label": "Pinterest URL"
+    },
+    {
+      "type": "url",
+      "id": "instagram_url",
+      "label": "Instagram URL"
+    },
+    {
+      "type": "url",
+      "id": "facebook_url",
+      "label": "Facebook URL"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Corporate gifting"
+    }
+  ]
+}
+{% endschema %}
