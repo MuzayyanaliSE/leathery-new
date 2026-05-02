@@ -224,6 +224,7 @@
                               {%- if step_by_step_variant -%}<a role="link" aria-disabled="true" data-action="next" class="btn-next__variant product-form__submit button button--primary an-horizontal-shaking button-text-change">{{ 'products.product.step_by_step.next' | t }}</a>{%- endif -%}
                             {% endif %}
                             <input type="hidden" name="id" value="{{ current_variant.id }}">
+                            <p class="productView-engraving-note" style="font-weight: 700; margin: 0 0 10px;">For Engraving, PKR-200 extra charges. Place order on WhatsApp.</p>
                             <div class="product-form__buttons">
                                 {%- if current_variant.available -%}
                                     {%- if current_variant.inventory_management -%}
@@ -295,10 +296,6 @@
                         </div>
                     </div>
                 {%- endif -%}
-                <div class="productView-engraving-note" style="margin-top: 12px; padding: 10px 12px; border: 1px solid #B4703E; background: #FBF3EE; color: #1F1B18; border-radius: 6px; font-size: 14px; line-height: 1.5;">
-                    <strong>For Engraving:</strong> PKR&nbsp;200 extra charges. Please place your order on
-                    <a href="https://wa.me/923041203456" target="_blank" rel="noopener" style="color: #B4703E; font-weight: 600; text-decoration: underline;">WhatsApp</a>.
-                </div>
             </div>
         {%- endform -%}
     </product-form>
